@@ -1,0 +1,50 @@
+DecoTreeMod allows you to add outdoor decorative elements in the form of trees to the game. You can choose between trees planted in wooden boxes or decorative artificial trees, which you can place wherever you like.
+
+Update of 10/16/2025
+
+Added 8 new decorative pot objects for indoor and outdoor use.
+
+Fixed placement of trees in planters.
+
+
+
+Update 1.2:
+
+Added German translation.
+Removed elements related to the house point.
+Removed the room requirement.
+
+Update 1.1:
+
+Fixed "Box" crafting.
+
+Mod Details:
+
+This mod adds 6 types of decorative trees, available in wooden boxes and with flowers:
+
+Palm Tree Box
+Oak Tree Box
+Redwood Tree Box
+Birch Tree Box
+Fir Tree Box
+Cactus Box
+
+To craft one of these decorations, you must be a farmer and go to the agriculture table. There, you will find the necessary recipes. A wooden box and agricultural items will be required for crafting. Additionally, a carpenter must be present to complete the recipe.
+
+You can also choose to have these trees in their natural versions, without flowers or boxes. These can be crafted directly at the agriculture table:
+
+Palm Tree
+Oak Tree
+Redwood Tree
+Birch Tree
+Cactus
+
+Usage:
+
+The usage is very simple. The decorations can be crafted at the agriculture table.
+
+Installation:
+
+Place the folder "DecoTreeMod_YOURLANGUAGE" in the "/Mods/UserCode" directory and also add the "Assets" folder to "/Mods/UserCode".
+
+Feel free to share your feedback on the mod and suggest additions or changes. We would also be interested in your feedback regarding the balance of recipes for a smoother gameplay experience.

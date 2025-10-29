@@ -1,0 +1,45 @@
+DecoTreeMod vous permet d'ajouter des éléments décoratifs extérieurs sous forme d'arbres au jeu. Vous pouvez choisir entre des arbres plantés dans des caisses en bois ou des faux arbres décoratifs, que vous pouvez placer où vous le souhaitez.
+
+Mise à jour de 16/10/2025
+
+Ajout de 8 nouveaux objets des pots décoratifs intérieure et extérieure. 
+Correction de placement des arbres en bac. 
+
+Détails du module :
+
+Ce mod ajoute 6 types d'arbres décoratifs, disponibles dans des caisses en bois et avec des fleurs :
+
+Coffret Palmier
+Coffret en chêne
+Coffret en séquoia
+Coffret en bouleau
+Coffret en sapin
+Boîte à cactus
+
+
+Pour fabriquer l'une de ces décorations, vous devez être agriculteur et vous rendre à la table de ferme. Vous y trouverez les recettes nécessaires. Une boîte en bois et des éléments agricoles seront nécessaires à la fabrication. De plus, un menuisier devra être présent pour terminer la recette.
+
+Vous pouvez également choisir d'avoir ces arbres en version naturelle, sans fleurs ni boîtes. Ceux-ci peuvent être fabriqués directement sur la table de ferme :
+
+Palmier
+Chêne
+Séquoia
+Bouleau
+Cactus
+
+
+Usage:
+
+L'utilisation est très simple. Les décorations peuvent être fabriquées sur la table de ferme.
+
+
+Installation:
+
+Placer le dossier "DecoTreeMod_VOTRELANGUE" dans le dossier "/Mods/UserCode" et ajouter également le dossier "Assets" dans "/Mods/UserCode".
+
+
+
+Retour:
+
+
+N'hésitez pas à partager vos avis sur le mod et à nous faire part de vos suggestions d'ajouts ou de modifications. Nous serions également intéressés par vos retours concernant l'équilibrage des recettes pour une expérience de jeu plus harmonieuse.

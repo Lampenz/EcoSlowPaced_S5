@@ -1,0 +1,53 @@
+/// Mod créé par Plex \\\
+// Mise à jour le 23/10/2025
+
+Détails du mod :
+
+Le Mod Stockage ajoute 14 nouveaux éléments de stockage au jeu. Voici la liste :
+
+
+Palette (Fabriqué dans la table de Charpentier) : permet de stocker tous les éléments de construction et les lingots, avec une capacité de 8 emplacements, empilable par 80.
+
+
+Big Bag (Fabriqué dans la table de Tailleur) : permet de stocker la terre, le sable, la pierre et les matériaux concassés, avec une capacité de 10 emplacements, empilable par 80.
+
+
+Stockages à bois de 3 tailles différentes (Fabriqués dans la table de Charpentier) :
+
+PetitStockage : 18 emplacements, empilable par 40.
+MoyenStockage : 24 emplacements, empilable par 60.
+GrandStockage : 32 emplacements, empilable par 80.
+
+Containers de 3 tailles et capacités différentes (Fabriqué dans la table de Mécanique) :    
+
+Container Bleu : 32 emplacements, empilable par 60.
+Container Vert : 64 emplacements, empilable par 60.
+Container Rouge : 128 emplacements, empilable par 60.
+
+
+Étagères pour stocker tous les items du jeu (Fabriquées dans la table de Mécanique) :  
+
+Petite Etagère Simple : 8 emplacement, empilable par 40.
+Petite Etagère Double : 16 emplacement, empilable par 40.
+
+Grande Etagère Simple : 32 emplacement, empilable par 40.
+Grande Etagère Double : 64 emplacement, empilable par 40.
+
+
+
+Stockage mural à outils (Fabriqué dans la table de Charpentier) : permet de stocker tous les outils dans des emplacements dédiés, avec une capacité de 32 emplacements.
+
+
+Utilisation :
+
+L'utilisation est très simple. Chaque élément de stockage peut être fabriqué à partir de la table indiquée ci-dessus. Vous pouvez également retrouver chaque élément dans l'Ecopédia.
+
+Modification : 
+
+Des annotations ont été ajoutées au code contenu dans le fichier StorageMore_French.cs, vous permettant de modifier à votre convenance la taille des stockages, le multiplicateur de piles ainsi que d’autres options.
+
+
+
+Installation :
+
+Placer le dossier "StorageMore_VOTRELANGUE" dans le dossier "/Mods/UserCode" et ajouter également le dossier "Assets" dans "/Mods/UserCode".

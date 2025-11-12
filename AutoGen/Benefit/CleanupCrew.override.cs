@@ -1,3 +1,4 @@
+
 // Copyright (c) Strange Loop Games. All rights reserved.
 // See LICENSE file in the project root for full license information.
 
@@ -19,7 +20,12 @@ namespace Eco.Mods.TechTree
     using Eco.Shared.View;
 
     /// <summary>
-    /// Base talent definition for "PerfectCut"
+    /// <para>Server side talent definition for "CleanupCrew".</para>
+    /// <para>More information about Talent objects can be found at https://docs.play.eco/api/server/eco.gameplay/Eco.Gameplay.Skills.Talent.html</para>
+    /// <remarks>
+    /// This is an auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization. 
+    /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
+    /// </remarks>
     /// </summary>
     public partial class PerfectCutTalent : Talent
     {

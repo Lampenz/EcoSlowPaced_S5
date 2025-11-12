@@ -67,7 +67,7 @@ namespace Eco.Mods.TechTree
     // ______________________________________________________ Box_Item ______________________________________________________ \\
 
 
-    [RequiresSkill(typeof(LoggingSkill), 1)]
+    [RequiresSkill(typeof(LoggingSkill), 4)]
     [Ecopedia("Items", "Products", subPageName: "Box Item")]
     public partial class BoxRecipe : RecipeFamily
     {
@@ -80,7 +80,8 @@ namespace Eco.Mods.TechTree
 
                 ingredients: new List<IngredientElement>
                 {
-                    new IngredientElement("WoodBoard", 8, typeof(LoggingSkill)),
+                    new IngredientElement("Wood", 10, typeof(LoggingSkill)),
+                    new IngredientElement("WoodBoard", 10, typeof(LoggingSkill)),
                 },
 
                 items: new List<CraftingElement>
@@ -155,7 +156,7 @@ namespace Eco.Mods.TechTree
         protected override OccupancyContext GetOccupancyContext => new SideAttachedContext(0 | DirectionAxisFlags.Down, WorldObject.GetOccupancyInfo(this.WorldObjectType));
     }
 
-    [RequiresSkill(typeof(FarmingSkill), 1)]
+    [RequiresSkill(typeof(FertilizersSkill), 1)]
     [Ecopedia("Housing Objects", "Outdoor", subPageName: "Palm Box")]
     public partial class Box_Arbre_PalmRecipe : RecipeFamily
     {
@@ -168,10 +169,10 @@ namespace Eco.Mods.TechTree
 
                 ingredients: new List<IngredientElement>
                 {
-                new IngredientElement(typeof(PalmSeedItem), 1, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
-                new IngredientElement(typeof(HeliconiaSeedItem), 2, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
-                new IngredientElement(typeof(BoxItem), 1, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
-                new IngredientElement(typeof(DirtItem), 4, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
+                new IngredientElement(typeof(PalmSeedItem), 1, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
+                new IngredientElement(typeof(OrchidSeedItem), 2, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
+                new IngredientElement(typeof(BoxItem), 1, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
+                new IngredientElement(typeof(DirtItem), 6, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
                 },
 
                 items: new List<CraftingElement>
@@ -182,9 +183,9 @@ namespace Eco.Mods.TechTree
 
             this.ExperienceOnCraft = 4;
 
-            this.LaborInCalories = CreateLaborInCaloriesValue(60, typeof(FarmingSkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(60, typeof(FertilizersSkill));
 
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Box_Arbre_PalmRecipe), start: 2, skillType: typeof(FarmingSkill), typeof(FarmingFocusedSpeedTalent), typeof(FarmingParallelSpeedTalent));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Box_Arbre_PalmRecipe), start: 2, skillType: typeof(FertilizersSkill), typeof(FarmingFocusedSpeedTalent), typeof(FarmingParallelSpeedTalent));
 
             this.ModsPreInitialize();
             this.Initialize(displayText: Localizer.DoStr("Palm Box"), recipeType: typeof(Box_Arbre_PalmRecipe));
@@ -233,7 +234,7 @@ namespace Eco.Mods.TechTree
         protected override OccupancyContext GetOccupancyContext => new SideAttachedContext(0 | DirectionAxisFlags.Down, WorldObject.GetOccupancyInfo(this.WorldObjectType));
     }
 
-    [RequiresSkill(typeof(FarmingSkill), 1)]
+    [RequiresSkill(typeof(FertilizersSkill), 1)]
     [Ecopedia("Housing Objects", "Outdoor", subPageName: "Oak Box")]
     public partial class Box_Arbre_OakRecipe : RecipeFamily
     {
@@ -246,10 +247,10 @@ namespace Eco.Mods.TechTree
 
                 ingredients: new List<IngredientElement>
                 {
-                new IngredientElement(typeof(AcornItem), 1, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
-                new IngredientElement(typeof(HeliconiaSeedItem), 2, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
-                new IngredientElement(typeof(BoxItem), 1, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
-                new IngredientElement(typeof(DirtItem), 4, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
+                new IngredientElement(typeof(AcornItem), 1, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
+                new IngredientElement(typeof(OrchidSeedItem), 2, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
+                new IngredientElement(typeof(BoxItem), 1, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
+                new IngredientElement(typeof(DirtItem), 6, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
                 },
 
                 items: new List<CraftingElement>
@@ -260,9 +261,9 @@ namespace Eco.Mods.TechTree
 
             this.ExperienceOnCraft = 4;
 
-            this.LaborInCalories = CreateLaborInCaloriesValue(60, typeof(FarmingSkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(60, typeof(FertilizersSkill));
 
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Box_Arbre_OakRecipe), start: 2, skillType: typeof(FarmingSkill), typeof(FarmingFocusedSpeedTalent), typeof(FarmingParallelSpeedTalent));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Box_Arbre_OakRecipe), start: 2, skillType: typeof(FertilizersSkill), typeof(FarmingFocusedSpeedTalent), typeof(FarmingParallelSpeedTalent));
 
             this.ModsPreInitialize();
             this.Initialize(displayText: Localizer.DoStr("Oak Box"), recipeType: typeof(Box_Arbre_OakRecipe));
@@ -312,7 +313,7 @@ namespace Eco.Mods.TechTree
         protected override OccupancyContext GetOccupancyContext => new SideAttachedContext(0 | DirectionAxisFlags.Down, WorldObject.GetOccupancyInfo(this.WorldObjectType));
     }
 
-    [RequiresSkill(typeof(FarmingSkill), 1)]
+    [RequiresSkill(typeof(FertilizersSkill), 1)]
     [Ecopedia("Housing Objects", "Outdoor", subPageName: "Redwood Box")]
     public partial class Box_Arbre_RedwoodRecipe : RecipeFamily
     {
@@ -325,10 +326,10 @@ namespace Eco.Mods.TechTree
 
                 ingredients: new List<IngredientElement>
                 {
-                new IngredientElement(typeof(RedwoodSeedItem), 1, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
-                new IngredientElement(typeof(HeliconiaSeedItem), 2, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
-                new IngredientElement(typeof(BoxItem), 1, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
-                new IngredientElement(typeof(DirtItem), 4, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
+                new IngredientElement(typeof(RedwoodSeedItem), 1, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
+                new IngredientElement(typeof(OrchidSeedItem), 2, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
+                new IngredientElement(typeof(BoxItem), 1, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
+                new IngredientElement(typeof(DirtItem), 6, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
                 },
 
                 items: new List<CraftingElement>
@@ -339,9 +340,9 @@ namespace Eco.Mods.TechTree
 
             this.ExperienceOnCraft = 4;
 
-            this.LaborInCalories = CreateLaborInCaloriesValue(60, typeof(FarmingSkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(60, typeof(FertilizersSkill));
 
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Box_Arbre_RedwoodRecipe), start: 2, skillType: typeof(FarmingSkill), typeof(FarmingFocusedSpeedTalent), typeof(FarmingParallelSpeedTalent));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Box_Arbre_RedwoodRecipe), start: 2, skillType: typeof(FertilizersSkill), typeof(FarmingFocusedSpeedTalent), typeof(FarmingParallelSpeedTalent));
 
             this.ModsPreInitialize();
             this.Initialize(displayText: Localizer.DoStr("Redwood Box"), recipeType: typeof(Box_Arbre_RedwoodRecipe));
@@ -391,7 +392,7 @@ namespace Eco.Mods.TechTree
         protected override OccupancyContext GetOccupancyContext => new SideAttachedContext(0 | DirectionAxisFlags.Down, WorldObject.GetOccupancyInfo(this.WorldObjectType));
     }
 
-    [RequiresSkill(typeof(FarmingSkill), 1)]
+    [RequiresSkill(typeof(FertilizersSkill), 1)]
     [Ecopedia("Housing Objects", "Outdoor", subPageName: "Birch Box")]
     public partial class Box_Arbre_BirchRecipe : RecipeFamily
     {
@@ -404,10 +405,10 @@ namespace Eco.Mods.TechTree
 
                 ingredients: new List<IngredientElement>
                 {
-                new IngredientElement(typeof(BirchSeedItem), 1, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
-                new IngredientElement(typeof(HeliconiaSeedItem), 2, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
-                new IngredientElement(typeof(BoxItem), 1, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
-                new IngredientElement(typeof(DirtItem), 4, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
+                new IngredientElement(typeof(BirchSeedItem), 1, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
+                new IngredientElement(typeof(OrchidSeedItem), 2, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
+                new IngredientElement(typeof(BoxItem), 1, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
+                new IngredientElement(typeof(DirtItem), 6, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
                 },
 
                 items: new List<CraftingElement>
@@ -418,9 +419,9 @@ namespace Eco.Mods.TechTree
 
             this.ExperienceOnCraft = 4;
 
-            this.LaborInCalories = CreateLaborInCaloriesValue(60, typeof(FarmingSkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(60, typeof(FertilizersSkill));
 
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Box_Arbre_BirchRecipe), start: 2, skillType: typeof(FarmingSkill), typeof(FarmingFocusedSpeedTalent), typeof(FarmingParallelSpeedTalent));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Box_Arbre_BirchRecipe), start: 2, skillType: typeof(FertilizersSkill), typeof(FarmingFocusedSpeedTalent), typeof(FarmingParallelSpeedTalent));
 
             this.ModsPreInitialize();
             this.Initialize(displayText: Localizer.DoStr("Birch Box"), recipeType: typeof(Box_Arbre_BirchRecipe));
@@ -471,7 +472,7 @@ namespace Eco.Mods.TechTree
         protected override OccupancyContext GetOccupancyContext => new SideAttachedContext(0 | DirectionAxisFlags.Down, WorldObject.GetOccupancyInfo(this.WorldObjectType));
     }
 
-    [RequiresSkill(typeof(FarmingSkill), 1)]
+    [RequiresSkill(typeof(FertilizersSkill), 1)]
     [Ecopedia("Housing Objects", "Outdoor", subPageName: "Spruce Box")]
     public partial class Box_Arbre_SpruceRecipe : RecipeFamily
     {
@@ -484,10 +485,10 @@ namespace Eco.Mods.TechTree
 
                 ingredients: new List<IngredientElement>
                 {
-                new IngredientElement(typeof(SpruceSeedItem), 1, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
-                new IngredientElement(typeof(HeliconiaSeedItem), 2, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
-                new IngredientElement(typeof(BoxItem), 1, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
-                new IngredientElement(typeof(DirtItem), 4, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
+                new IngredientElement(typeof(SpruceSeedItem), 1, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
+                new IngredientElement(typeof(OrchidSeedItem), 2, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
+                new IngredientElement(typeof(BoxItem), 1, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
+                new IngredientElement(typeof(DirtItem), 6, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
                 },
 
                 items: new List<CraftingElement>
@@ -498,9 +499,9 @@ namespace Eco.Mods.TechTree
 
             this.ExperienceOnCraft = 4;
 
-            this.LaborInCalories = CreateLaborInCaloriesValue(60, typeof(FarmingSkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(60, typeof(FertilizersSkill));
 
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Box_Arbre_SpruceRecipe), start: 2, skillType: typeof(FarmingSkill), typeof(FarmingFocusedSpeedTalent), typeof(FarmingParallelSpeedTalent));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Box_Arbre_SpruceRecipe), start: 2, skillType: typeof(FertilizersSkill), typeof(FarmingFocusedSpeedTalent), typeof(FarmingParallelSpeedTalent));
 
             this.ModsPreInitialize();
             this.Initialize(displayText: Localizer.DoStr("Spruce Box"), recipeType: typeof(Box_Arbre_SpruceRecipe));
@@ -550,7 +551,7 @@ namespace Eco.Mods.TechTree
         protected override OccupancyContext GetOccupancyContext => new SideAttachedContext(0 | DirectionAxisFlags.Down, WorldObject.GetOccupancyInfo(this.WorldObjectType));
     }
 
-    [RequiresSkill(typeof(FarmingSkill), 1)]
+    [RequiresSkill(typeof(FertilizersSkill), 1)]
     [Ecopedia("Housing Objects", "Outdoor", subPageName: "Cactus Box")]
     public partial class Box_Arbre_CactusRecipe : RecipeFamily
     {
@@ -563,10 +564,10 @@ namespace Eco.Mods.TechTree
 
                 ingredients: new List<IngredientElement>
                 {
-                new IngredientElement(typeof(SaguaroSeedItem), 1, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
-                new IngredientElement(typeof(HeliconiaSeedItem), 2, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
-                new IngredientElement(typeof(BoxItem), 1, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
-                new IngredientElement(typeof(DirtItem), 4, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
+                new IngredientElement(typeof(SaguaroSeedItem), 1, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
+                new IngredientElement(typeof(OrchidSeedItem), 2, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
+                new IngredientElement(typeof(BoxItem), 1, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
+                new IngredientElement(typeof(DirtItem), 6, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
                 },
 
                 items: new List<CraftingElement>
@@ -577,9 +578,9 @@ namespace Eco.Mods.TechTree
 
             this.ExperienceOnCraft = 4;
 
-            this.LaborInCalories = CreateLaborInCaloriesValue(60, typeof(FarmingSkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(60, typeof(FertilizersSkill));
 
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Box_Arbre_CactusRecipe), start: 2, skillType: typeof(FarmingSkill), typeof(FarmingFocusedSpeedTalent), typeof(FarmingParallelSpeedTalent));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Box_Arbre_CactusRecipe), start: 2, skillType: typeof(FertilizersSkill), typeof(FarmingFocusedSpeedTalent), typeof(FarmingParallelSpeedTalent));
 
             this.ModsPreInitialize();
             this.Initialize(displayText: Localizer.DoStr("Cactus Box"), recipeType: typeof(Box_Arbre_CactusRecipe));
@@ -628,7 +629,7 @@ namespace Eco.Mods.TechTree
         protected override OccupancyContext GetOccupancyContext => new SideAttachedContext(0 | DirectionAxisFlags.Down, WorldObject.GetOccupancyInfo(this.WorldObjectType));
     }
 
-    [RequiresSkill(typeof(FarmingSkill), 1)]
+    [RequiresSkill(typeof(FertilizersSkill), 1)]
     [Ecopedia("Housing Objects", "Outdoor", subPageName: "Decorative Palm Tree")]
     public partial class Fake_Arbre_PalmRecipe : RecipeFamily
     {
@@ -652,9 +653,9 @@ namespace Eco.Mods.TechTree
 
             this.ExperienceOnCraft = 4;
 
-            this.LaborInCalories = CreateLaborInCaloriesValue(120, typeof(FarmingSkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(120, typeof(FertilizersSkill));
 
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Fake_Arbre_PalmRecipe), start: 5, skillType: typeof(FarmingSkill), typeof(FarmingFocusedSpeedTalent), typeof(FarmingParallelSpeedTalent));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Fake_Arbre_PalmRecipe), start: 5, skillType: typeof(FertilizersSkill), typeof(FarmingFocusedSpeedTalent), typeof(FarmingParallelSpeedTalent));
 
             this.ModsPreInitialize();
             this.Initialize(displayText: Localizer.DoStr("Decorative Palm Tree"), recipeType: typeof(Fake_Arbre_PalmRecipe));
@@ -704,7 +705,7 @@ namespace Eco.Mods.TechTree
         protected override OccupancyContext GetOccupancyContext => new SideAttachedContext(0 | DirectionAxisFlags.Down, WorldObject.GetOccupancyInfo(this.WorldObjectType));
     }
 
-    [RequiresSkill(typeof(FarmingSkill), 1)]
+    [RequiresSkill(typeof(FertilizersSkill), 1)]
     [Ecopedia("Housing Objects", "Outdoor", subPageName: "Decorative Oak Tree")]
     public partial class Fake_Arbre_OakRecipe : RecipeFamily
     {
@@ -717,7 +718,7 @@ namespace Eco.Mods.TechTree
 
                 ingredients: new List<IngredientElement>
                 {
-                new IngredientElement(typeof(AcornItem), 10, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
+                new IngredientElement(typeof(AcornItem), 10, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
                 },
 
                 items: new List<CraftingElement>
@@ -728,9 +729,9 @@ namespace Eco.Mods.TechTree
 
             this.ExperienceOnCraft = 4;
 
-            this.LaborInCalories = CreateLaborInCaloriesValue(120, typeof(FarmingSkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(120, typeof(FertilizersSkill));
 
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Fake_Arbre_OakRecipe), start: 5, skillType: typeof(FarmingSkill), typeof(FarmingFocusedSpeedTalent), typeof(FarmingParallelSpeedTalent));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Fake_Arbre_OakRecipe), start: 5, skillType: typeof(FertilizersSkill), typeof(FarmingFocusedSpeedTalent), typeof(FarmingParallelSpeedTalent));
 
             this.ModsPreInitialize();
             this.Initialize(displayText: Localizer.DoStr("Decorative Oak Tree"), recipeType: typeof(Fake_Arbre_OakRecipe));
@@ -781,7 +782,7 @@ namespace Eco.Mods.TechTree
         protected override OccupancyContext GetOccupancyContext => new SideAttachedContext(0 | DirectionAxisFlags.Down, WorldObject.GetOccupancyInfo(this.WorldObjectType));
     }
 
-    [RequiresSkill(typeof(FarmingSkill), 1)]
+    [RequiresSkill(typeof(FertilizersSkill), 1)]
     [Ecopedia("Housing Objects", "Outdoor", subPageName: "Decorative Redwood Tree")]
     public partial class Fake_Arbre_RedwoodRecipe : RecipeFamily
     {
@@ -794,7 +795,7 @@ namespace Eco.Mods.TechTree
 
                 ingredients: new List<IngredientElement>
                 {
-                new IngredientElement(typeof(RedwoodSeedItem), 10, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
+                new IngredientElement(typeof(RedwoodSeedItem), 10, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
                 },
 
                 items: new List<CraftingElement>
@@ -805,9 +806,9 @@ namespace Eco.Mods.TechTree
 
             this.ExperienceOnCraft = 4;
 
-            this.LaborInCalories = CreateLaborInCaloriesValue(120, typeof(FarmingSkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(120, typeof(FertilizersSkill));
 
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Fake_Arbre_RedwoodRecipe), start: 5, skillType: typeof(FarmingSkill), typeof(FarmingFocusedSpeedTalent), typeof(FarmingParallelSpeedTalent));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Fake_Arbre_RedwoodRecipe), start: 5, skillType: typeof(FertilizersSkill), typeof(FarmingFocusedSpeedTalent), typeof(FarmingParallelSpeedTalent));
 
             this.ModsPreInitialize();
             this.Initialize(displayText: Localizer.DoStr("Decorative Redwood Tree"), recipeType: typeof(Fake_Arbre_RedwoodRecipe));
@@ -858,7 +859,7 @@ namespace Eco.Mods.TechTree
         protected override OccupancyContext GetOccupancyContext => new SideAttachedContext(0 | DirectionAxisFlags.Down, WorldObject.GetOccupancyInfo(this.WorldObjectType));
     }
 
-    [RequiresSkill(typeof(FarmingSkill), 1)]
+    [RequiresSkill(typeof(FertilizersSkill), 1)]
     [Ecopedia("Housing Objects", "Outdoor", subPageName: "Decorative Birch Tree")]
     public partial class Fake_Arbre_BirchRecipe : RecipeFamily
     {
@@ -871,7 +872,7 @@ namespace Eco.Mods.TechTree
 
                 ingredients: new List<IngredientElement>
                 {
-                new IngredientElement(typeof(BirchSeedItem), 10, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
+                new IngredientElement(typeof(BirchSeedItem), 10, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
                 },
 
                 items: new List<CraftingElement>
@@ -882,9 +883,9 @@ namespace Eco.Mods.TechTree
 
             this.ExperienceOnCraft = 4;
 
-            this.LaborInCalories = CreateLaborInCaloriesValue(120, typeof(FarmingSkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(120, typeof(FertilizersSkill));
 
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Fake_Arbre_BirchRecipe), start: 5, skillType: typeof(FarmingSkill), typeof(FarmingFocusedSpeedTalent), typeof(FarmingParallelSpeedTalent));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Fake_Arbre_BirchRecipe), start: 5, skillType: typeof(FertilizersSkill), typeof(FarmingFocusedSpeedTalent), typeof(FarmingParallelSpeedTalent));
 
             this.ModsPreInitialize();
             this.Initialize(displayText: Localizer.DoStr("Decorative Birch Tree"), recipeType: typeof(Fake_Arbre_BirchRecipe));
@@ -935,7 +936,7 @@ namespace Eco.Mods.TechTree
         protected override OccupancyContext GetOccupancyContext => new SideAttachedContext(0 | DirectionAxisFlags.Down, WorldObject.GetOccupancyInfo(this.WorldObjectType));
     }
 
-    [RequiresSkill(typeof(FarmingSkill), 1)]
+    [RequiresSkill(typeof(FertilizersSkill), 1)]
     [Ecopedia("Housing Objects", "Outdoor", subPageName: "Decorative Cactus Tree")]
     public partial class Fake_Arbre_CactusRecipe : RecipeFamily
     {
@@ -948,7 +949,7 @@ namespace Eco.Mods.TechTree
 
                 ingredients: new List<IngredientElement>
                 {
-                new IngredientElement(typeof(SaguaroSeedItem), 10, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
+                new IngredientElement(typeof(SaguaroSeedItem), 10, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
                 },
 
                 items: new List<CraftingElement>
@@ -959,9 +960,9 @@ namespace Eco.Mods.TechTree
 
             this.ExperienceOnCraft = 4;
 
-            this.LaborInCalories = CreateLaborInCaloriesValue(120, typeof(FarmingSkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(120, typeof(FertilizersSkill));
 
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Fake_Arbre_CactusRecipe), start: 5, skillType: typeof(FarmingSkill), typeof(FarmingFocusedSpeedTalent), typeof(FarmingParallelSpeedTalent));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Fake_Arbre_CactusRecipe), start: 5, skillType: typeof(FertilizersSkill), typeof(FarmingFocusedSpeedTalent), typeof(FarmingParallelSpeedTalent));
 
             this.ModsPreInitialize();
             this.Initialize(displayText: Localizer.DoStr("Decorative Cactus Tree"), recipeType: typeof(Fake_Arbre_CactusRecipe));
@@ -1198,7 +1199,7 @@ namespace Eco.Mods.TechTree
         };
     }
 
-    [RequiresSkill(typeof(MasonrySkill), 1)]
+    [RequiresSkill(typeof(GatheringSkill), 1)]
     [Ecopedia("Housing Objects", "Decoration", subPageName: "Potted Fern")]
     public partial class Pot01Recipe : RecipeFamily
     {
@@ -1211,8 +1212,8 @@ namespace Eco.Mods.TechTree
 
                 ingredients: new List<IngredientElement>
                 {
-                new IngredientElement("Rock", 4, typeof(MasonrySkill), typeof(MasonryLavishResourcesTalent)),
-                new IngredientElement(typeof(HeliconiaSeedItem), 1, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
+                new IngredientElement("MortaredStone", 4, typeof(GatheringSkill), typeof(MasonryLavishResourcesTalent)),
+                new IngredientElement(typeof(OrchidSeedItem), 1, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
                 new IngredientElement(typeof(DirtItem), 2, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
                 },
 
@@ -1223,15 +1224,15 @@ namespace Eco.Mods.TechTree
             this.Recipes = new List<Recipe> { recipe };
             this.ExperienceOnCraft = 4;
 
-            this.LaborInCalories = CreateLaborInCaloriesValue(40, typeof(MasonrySkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(40, typeof(GatheringSkill));
 
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Pot01Recipe), start: 2, skillType: typeof(MasonrySkill), typeof(MasonryFocusedSpeedTalent), typeof(MasonryParallelSpeedTalent));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Pot01Recipe), start: 2, skillType: typeof(GatheringSkill), typeof(MasonryFocusedSpeedTalent), typeof(MasonryParallelSpeedTalent));
 
             this.ModsPreInitialize();
             this.Initialize(displayText: Localizer.DoStr("Potted Fern"), recipeType: typeof(Pot01Recipe));
             this.ModsPostInitialize();
 
-            CraftingComponent.AddRecipe(tableType: typeof(MasonryTableObject), recipeFamily: this);
+            CraftingComponent.AddRecipe(tableType: typeof(FarmersTableObject), recipeFamily: this);
         }
 
         partial void ModsPreInitialize();
@@ -1293,7 +1294,7 @@ namespace Eco.Mods.TechTree
         };
     }
 
-    [RequiresSkill(typeof(PotterySkill), 3)]
+    [RequiresSkill(typeof(GatheringSkill), 3)]
     [Ecopedia("Housing Objects", "Decoration", subPageName: "Hanging Flower Pot")]
     public partial class Pot02Recipe : RecipeFamily
     {
@@ -1306,7 +1307,9 @@ namespace Eco.Mods.TechTree
 
                 ingredients: new List<IngredientElement>
                 {
-                new IngredientElement(typeof(ClayItem), 4, typeof(PotterySkill), typeof(PotteryLavishResourcesTalent)),
+                new IngredientElement(typeof(PlanterPotRoundItem), 1, typeof(GatheringSkill)),
+                new IngredientElement(typeof(OutpostNettingItem), 1, typeof(GatheringSkill)),
+                new IngredientElement(typeof(DirtItem), 3, typeof(GatheringSkill)),
                 },
 
                 items: new List<CraftingElement>
@@ -1316,14 +1319,14 @@ namespace Eco.Mods.TechTree
             this.Recipes = new List<Recipe> { recipe };
             this.ExperienceOnCraft = 1;
 
-            this.LaborInCalories = CreateLaborInCaloriesValue(45, typeof(PotterySkill));
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Pot02Recipe), start: 2, skillType: typeof(PotterySkill), typeof(PotteryFocusedSpeedTalent), typeof(PotteryParallelSpeedTalent));
+            this.LaborInCalories = CreateLaborInCaloriesValue(45, typeof(GatheringSkill));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Pot02Recipe), start: 2, skillType: typeof(GatheringSkill), typeof(PotteryFocusedSpeedTalent), typeof(PotteryParallelSpeedTalent));
 
             this.ModsPreInitialize();
             this.Initialize(displayText: Localizer.DoStr("Hanging Flower Pot"), recipeType: typeof(Pot02Recipe));
             this.ModsPostInitialize();
 
-            CraftingComponent.AddRecipe(tableType: typeof(PotteryTableObject), recipeFamily: this);
+            CraftingComponent.AddRecipe(tableType: typeof(FarmersTableObject), recipeFamily: this);
         }
 
         partial void ModsPreInitialize();
@@ -1385,7 +1388,7 @@ namespace Eco.Mods.TechTree
         };
     }
 
-    [RequiresSkill(typeof(MasonrySkill), 3)]
+    [RequiresSkill(typeof(FertilizersSkill), 3)]
     [Ecopedia("Housing Objects", "Decoration", subPageName: "1x1 Garden Planter")]
     public partial class Pot03Recipe : RecipeFamily
     {
@@ -1398,9 +1401,9 @@ namespace Eco.Mods.TechTree
 
                 ingredients: new List<IngredientElement>
                 {
-                new IngredientElement("Rock", 8, typeof(MasonrySkill), typeof(MasonryLavishResourcesTalent)),
-                new IngredientElement(typeof(HeliconiaSeedItem), 1, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
-                new IngredientElement(typeof(DirtItem), 4, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
+                new IngredientElement("MortaredStone", 8, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
+                new IngredientElement(typeof(OrchidSeedItem), 4, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
+                new IngredientElement(typeof(DirtItem), 6, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
                 },
 
                 items: new List<CraftingElement>
@@ -1410,15 +1413,15 @@ namespace Eco.Mods.TechTree
             this.Recipes = new List<Recipe> { recipe };
             this.ExperienceOnCraft = 4;
 
-            this.LaborInCalories = CreateLaborInCaloriesValue(40, typeof(MasonrySkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(40, typeof(FertilizersSkill));
 
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Pot03Recipe), start: 3, skillType: typeof(MasonrySkill), typeof(MasonryFocusedSpeedTalent), typeof(MasonryParallelSpeedTalent));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Pot03Recipe), start: 3, skillType: typeof(FertilizersSkill), typeof(MasonryFocusedSpeedTalent), typeof(MasonryParallelSpeedTalent));
 
             this.ModsPreInitialize();
             this.Initialize(displayText: Localizer.DoStr("1x1 Garden Planter"), recipeType: typeof(Pot03Recipe));
             this.ModsPostInitialize();
 
-            CraftingComponent.AddRecipe(tableType: typeof(MasonryTableObject), recipeFamily: this);
+            CraftingComponent.AddRecipe(tableType: typeof(FarmersTableObject), recipeFamily: this);
         }
 
         partial void ModsPreInitialize();
@@ -1480,7 +1483,7 @@ namespace Eco.Mods.TechTree
         };
     }
 
-    [RequiresSkill(typeof(MasonrySkill), 3)]
+    [RequiresSkill(typeof(FertilizersSkill), 3)]
     [Ecopedia("Housing Objects", "Decoration", subPageName: "2x2 Garden Planter")]
     public partial class Pot04Recipe : RecipeFamily
     {
@@ -1493,9 +1496,9 @@ namespace Eco.Mods.TechTree
 
                 ingredients: new List<IngredientElement>
                 {
-                new IngredientElement("Rock", 12, typeof(MasonrySkill), typeof(MasonryLavishResourcesTalent)),
-                new IngredientElement(typeof(HeliconiaSeedItem), 2, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
-                new IngredientElement(typeof(DirtItem), 6, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
+                new IngredientElement("MortaredStone", 12, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
+                new IngredientElement(typeof(OrchidSeedItem), 8, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
+                new IngredientElement(typeof(DirtItem), 6, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
                 },
 
                 items: new List<CraftingElement>
@@ -1505,15 +1508,15 @@ namespace Eco.Mods.TechTree
             this.Recipes = new List<Recipe> { recipe };
             this.ExperienceOnCraft = 4;
 
-            this.LaborInCalories = CreateLaborInCaloriesValue(40, typeof(MasonrySkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(40, typeof(FertilizersSkill));
 
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Pot04Recipe), start: 2, skillType: typeof(MasonrySkill), typeof(MasonryFocusedSpeedTalent), typeof(MasonryParallelSpeedTalent));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Pot04Recipe), start: 2, skillType: typeof(FertilizersSkill), typeof(MasonryFocusedSpeedTalent), typeof(MasonryParallelSpeedTalent));
 
             this.ModsPreInitialize();
             this.Initialize(displayText: Localizer.DoStr("2x2 Garden Planter"), recipeType: typeof(Pot04Recipe));
             this.ModsPostInitialize();
 
-            CraftingComponent.AddRecipe(tableType: typeof(MasonryTableObject), recipeFamily: this);
+            CraftingComponent.AddRecipe(tableType: typeof(FarmersTableObject), recipeFamily: this);
         }
 
         partial void ModsPreInitialize();
@@ -1575,7 +1578,7 @@ namespace Eco.Mods.TechTree
         };
     }
 
-    [RequiresSkill(typeof(MasonrySkill), 1)]
+    [RequiresSkill(typeof(FertilizersSkill), 1)]
     [Ecopedia("Housing Objects", "Decoration", subPageName: "Modern Rectangular Planter")]
     public partial class Pot05Recipe : RecipeFamily
     {
@@ -1588,9 +1591,9 @@ namespace Eco.Mods.TechTree
 
                 ingredients: new List<IngredientElement>
                 {
-                new IngredientElement("Rock", 5, typeof(MasonrySkill), typeof(MasonryLavishResourcesTalent)),
-                new IngredientElement(typeof(HeliconiaSeedItem), 1, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
-                new IngredientElement(typeof(DirtItem), 2, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
+                new IngredientElement("MortaredStone", 8, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
+                new IngredientElement(typeof(OrchidSeedItem), 5, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
+                new IngredientElement(typeof(DirtItem), 2, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
                 },
 
                 items: new List<CraftingElement>
@@ -1600,15 +1603,15 @@ namespace Eco.Mods.TechTree
             this.Recipes = new List<Recipe> { recipe };
             this.ExperienceOnCraft = 4;
 
-            this.LaborInCalories = CreateLaborInCaloriesValue(40, typeof(MasonrySkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(40, typeof(FertilizersSkill));
 
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Pot05Recipe), start: 2, skillType: typeof(MasonrySkill), typeof(MasonryFocusedSpeedTalent), typeof(MasonryParallelSpeedTalent));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Pot05Recipe), start: 2, skillType: typeof(FertilizersSkill), typeof(MasonryFocusedSpeedTalent), typeof(MasonryParallelSpeedTalent));
 
             this.ModsPreInitialize();
             this.Initialize(displayText: Localizer.DoStr("Modern Rectangular Planter"), recipeType: typeof(Pot05Recipe));
             this.ModsPostInitialize();
 
-            CraftingComponent.AddRecipe(tableType: typeof(MasonryTableObject), recipeFamily: this);
+            CraftingComponent.AddRecipe(tableType: typeof(FarmersTableObject), recipeFamily: this);
         }
 
         partial void ModsPreInitialize();
@@ -1651,7 +1654,7 @@ namespace Eco.Mods.TechTree
         protected override OccupancyContext GetOccupancyContext => new SideAttachedContext(0 | DirectionAxisFlags.Down, WorldObject.GetOccupancyInfo(this.WorldObjectType));
     }
 
-    [RequiresSkill(typeof(MasonrySkill), 1)]
+    [RequiresSkill(typeof(GatheringSkill), 1)]
     [Ecopedia("Housing Objects", "Decoration", subPageName: "Stone Spherical Pot")]
     public partial class Pot06Recipe : RecipeFamily
     {
@@ -1664,9 +1667,9 @@ namespace Eco.Mods.TechTree
 
                 ingredients: new List<IngredientElement>
                 {
-                new IngredientElement("Rock", 3, typeof(MasonrySkill), typeof(MasonryLavishResourcesTalent)),
-                new IngredientElement(typeof(HeliconiaSeedItem), 1, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
-                new IngredientElement(typeof(DirtItem), 1, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
+                new IngredientElement("MortaredStone", 5, typeof(GatheringSkill), typeof(MasonryLavishResourcesTalent)),
+                new IngredientElement(typeof(OrchidSeedItem), 1, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
+                new IngredientElement(typeof(DirtItem), 2, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
                 },
 
                 items: new List<CraftingElement>
@@ -1676,15 +1679,15 @@ namespace Eco.Mods.TechTree
             this.Recipes = new List<Recipe> { recipe };
             this.ExperienceOnCraft = 4;
 
-            this.LaborInCalories = CreateLaborInCaloriesValue(40, typeof(MasonrySkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(40, typeof(GatheringSkill));
 
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Pot06Recipe), start: 2, skillType: typeof(MasonrySkill), typeof(MasonryFocusedSpeedTalent), typeof(MasonryParallelSpeedTalent));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Pot06Recipe), start: 2, skillType: typeof(GatheringSkill), typeof(MasonryFocusedSpeedTalent), typeof(MasonryParallelSpeedTalent));
 
             this.ModsPreInitialize();
             this.Initialize(displayText: Localizer.DoStr("Stone Spherical Pot"), recipeType: typeof(Pot06Recipe));
             this.ModsPostInitialize();
 
-            CraftingComponent.AddRecipe(tableType: typeof(MasonryTableObject), recipeFamily: this);
+            CraftingComponent.AddRecipe(tableType: typeof(FarmersTableObject), recipeFamily: this);
         }
 
         partial void ModsPreInitialize();
@@ -1747,7 +1750,7 @@ namespace Eco.Mods.TechTree
         };
     }
 
-    [RequiresSkill(typeof(MasonrySkill), 4)]
+    [RequiresSkill(typeof(FertilizersSkill), 4)]
     [Ecopedia("Housing Objects", "Decoration", subPageName: "Garden Planter 2x3")]
     public partial class Pot07Recipe : RecipeFamily
     {
@@ -1760,9 +1763,9 @@ namespace Eco.Mods.TechTree
 
                 ingredients: new List<IngredientElement>
                 {
-                new IngredientElement("Rock", 20, typeof(MasonrySkill), typeof(MasonryLavishResourcesTalent)),
-                new IngredientElement(typeof(HeliconiaSeedItem), 4, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
-                new IngredientElement(typeof(DirtItem), 10, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
+                new IngredientElement("MortaredStone", 16, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
+                new IngredientElement(typeof(OrchidSeedItem), 16, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
+                new IngredientElement(typeof(DirtItem), 10, typeof(FertilizersSkill), typeof(FertilizersLavishResourcesTalent)),
                 },
 
                 items: new List<CraftingElement>
@@ -1772,15 +1775,15 @@ namespace Eco.Mods.TechTree
             this.Recipes = new List<Recipe> { recipe };
             this.ExperienceOnCraft = 4;
 
-            this.LaborInCalories = CreateLaborInCaloriesValue(40, typeof(MasonrySkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(40, typeof(FertilizersSkill));
 
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Pot07Recipe), start: 2, skillType: typeof(MasonrySkill), typeof(MasonryFocusedSpeedTalent), typeof(MasonryParallelSpeedTalent));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(Pot07Recipe), start: 2, skillType: typeof(FertilizersSkill), typeof(MasonryFocusedSpeedTalent), typeof(MasonryParallelSpeedTalent));
 
             this.ModsPreInitialize();
             this.Initialize(displayText: Localizer.DoStr("Garden Planter 2x3"), recipeType: typeof(Pot07Recipe));
             this.ModsPostInitialize();
 
-            CraftingComponent.AddRecipe(tableType: typeof(MasonryTableObject), recipeFamily: this);
+            CraftingComponent.AddRecipe(tableType: typeof(FarmersTableObject), recipeFamily: this);
         }
 
         partial void ModsPreInitialize();

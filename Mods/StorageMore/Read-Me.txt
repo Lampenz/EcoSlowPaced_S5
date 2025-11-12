@@ -1,0 +1,65 @@
+/// Mod created by Plex \\
+// Updated on 10/23/2025
+
+
+Mod details:
+
+
+The Storage Mod adds 14 new storage items to the game. Here’s the list:
+
+Pallet (Crafted at the Carpenter's Table):
+Allows storage of all construction items and ingots, with a capacity of 8 slots, stackable up to 80.
+
+
+
+Big Bag (Crafted at the Tailor's Table):
+Allows storage of dirt, sand, stone, and crushed materials, with a capacity of 10 slots, stackable up to 80.
+
+
+
+Wood storage units in 3 different sizes (Crafted at the Carpenter's Table):
+
+SmallStorage: 18 slots, stackable up to 40.
+MediumStorage: 24 slots, stackable up to 60.
+LargeStorage: 32 slots, stackable up to 80.
+
+
+
+Containers in 3 different sizes and capacities (Crafted at the Mechanics Table):
+
+Blue Container: 32 slots, stackable up to 60.
+Green Container: 64 slots, stackable up to 60.
+Red Container: 128 slots, stackable up to 60.
+
+
+
+
+Shelves to store all in-game items (Crafted at the Mechanics Table):
+
+Small Single Shelf: 8 slots, stackable up to 40.
+Small Double Shelf: 16 slots, stackable up to 40.
+Large Single Shelf: 32 slots, stackable up to 40.
+Large Double Shelf: 64 slots, stackable up to 40.
+
+
+
+Wall-mounted tool storage (Crafted at the Carpenter's Table):
+
+Allows storage of all tools in dedicated slots, with a capacity of 32 slots.
+
+
+
+
+Usage:
+
+The usage is very simple. Each storage item can be crafted from the table mentioned above. You can also find each item in the Ecopedia.
+
+
+Modification : 
+
+Annotations have been added to the code in the StorageMore_English.cs file, allowing you to adjust the storage size, stack multiplier, and other options as you wish.
+
+
+Installation:
+
+Place the "StorageMore_YOURLANGUAGE" folder in the "/Mods/UserCode" directory and also add the "Assets" folder to "/Mods/UserCode".

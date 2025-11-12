@@ -174,7 +174,7 @@ namespace Eco.Mods.Organisms
         public INetObjectViewer Controller { get; private set; }
     
         float ResourceMultiplier => (this.Species.ResourceRange.Diff * this.GrowthPercent) + this.Species.ResourceRange.Min;
-        int GetBasePickupSize(TrunkPiece trunk) => Math.Max(Mathf.RoundUpToInt((trunk.SliceEnd - trunk.SliceStart) * this.ResourceMultiplier), 1);
+        int GetBasePickupSize(TrunkPiece trunk) => Math.Max(Mathf.RoundPositivelyInt((trunk.SliceEnd - trunk.SliceStart) * this.ResourceMultiplier), 1);
 
         [Interaction(InteractionTrigger.InteractKey, requiredEnvVars: new[] { "canPickup", "id" }, animationDriven: true)]                        //A definition for when we can actually pickup
         public void PickUp(Player player, InteractionTriggerInfo trigger, InteractionTarget target) 
@@ -601,42 +601,7 @@ namespace Eco.Mods.Organisms
 			
 			return false;
 		}
-		
-		/// <summary>Shared method for trying to automatically remove a stump with the LoggersLuck talent</summary>
-		private bool TryApplyLoggersLuckTalent(INetObject damager)
-		{
-			var player = damager as Player;
-			if (player == null || player.User == null)
-				return false;
 				
-			// Check if the user has the LoggersLuck talent
-			bool hasLoggersLuckTalent = player.User.Talentset.HasTalent(typeof(Eco.Mods.TechTree.LoggingLoggersLuckTalent));
-			if (!hasLoggersLuckTalent || RandomUtil.Value >= 0.10f) // 10% chance
-				return false;
-				
-			// Remove stump automatically
-			if (World.GetBlock(this.Position.XYZi()).GetType() == this.Species.BlockType) 
-				World.DeleteBlock(this.Position.XYZi());
-			this.stumpHealth = 0;
-					
-			// Give tree resources
-			var changes = InventoryChangeSet.New(player.User.Inventory, player.User);
-			var trunkResources = this.Species.TrunkResources;
-			if (trunkResources != null) 
-				trunkResources.ForEach(x => changes.AddItemsNonUnique(x.Key, x.Value.RandInt));
-			changes.TryApply();
-			
-			this.RPC("DestroyStump");
-			
-			// Plant spot is now available for new growth
-			EcoSim.PlantSim.UpRootPlant(this);
-			
-			// Notify the player
-			player.InfoBox(new LocString(typeof(Eco.Mods.TechTree.LoggingLoggersLuckTalent).GetLocDisplayName().ToString() + " activated!"));
-			
-			return true;
-		}
-		
         private GameActionPack TryKillSapling(GameActionPack pack, INetObject damager, Item tool)
         {
             pack.AddGameAction(this.CreateChopTreeAction(damager, tool, true));
@@ -665,9 +630,6 @@ namespace Eco.Mods.Organisms
 					this.FellTree(damager);
 					this.ChopperUserID = damager is Player player ? player.User.Id : -1;
 					EcoSim.PlantSim.KillPlant(this, DeathType.Logging, true);
-					
-					// Try to apply for LoggersLuck talent (auto stump removal)
-					TryApplyLoggersLuckTalent(damager);
 				}
 
 				this.MarkDirty();
@@ -675,64 +637,87 @@ namespace Eco.Mods.Organisms
 			return pack;
 		}
 
-        private GameActionPack TryDamageStump(GameActionPack pack, INetObject damager, float amount, Item tool, bool giveResource = true)
-        {
-            if (this.Fallen && this.stumpHealth > 0)
-            {
-                var player = damager as Player;
-                if (player != null)
-                {
-                    pack.AddGameAction(new ChopStump()
-                    {
-                        Citizen        = player.User,
-                        ActionLocation = this.Position.XYZi(),
-                        Destroyed      = this.stumpHealth <= amount,
-                        Species        = this.Species.GetType(),
-                        ToolUsed       = tool
-                    });
-                }
-
-                pack.AddPostEffect(() =>
-                {
-					
-					 // Try to apply LoggersLuck talent
-					if (TryApplyLoggersLuckTalent(damager))
+		private GameActionPack TryDamageStump(GameActionPack pack, INetObject damager, float amount, Item tool, bool giveResource = true)
+		{
+			if (this.Fallen && this.stumpHealth > 0)
+			{
+				var player = damager as Player;
+				if (player != null)
+				{
+					// First, add the ChopStump game action regardless of how the stump will be removed
+					// This ensures laws will be triggered whether it's normal removal or via LoggersLuck
+					pack.AddGameAction(new ChopStump()
 					{
-						// Talent succeeded, stump destroyed
+						Citizen        = player.User,
+						ActionLocation = this.Position.XYZi(),
+						Destroyed      = this.stumpHealth <= amount || (player.User.Talentset.HasTalent(typeof(Eco.Mods.TechTree.LoggingLoggersLuckTalent)) && RandomUtil.Value < 0.10f),
+						Species        = this.Species.GetType(),
+						ToolUsed       = tool
+					});
+
+					// Check if LoggersLuck would trigger, but don't execute it yet
+					bool hasLoggersLuckTalent = player.User.Talentset.HasTalent(typeof(Eco.Mods.TechTree.LoggingLoggersLuckTalent));
+					bool talentWouldTrigger = hasLoggersLuckTalent && RandomUtil.Value < 0.10f;
+
+					pack.AddPostEffect(() =>
+					{
+						// Check if the LoggersLuck talent should trigger
+						if (talentWouldTrigger)
+						{
+							// Execute logic similar to TryApplyLoggersLuckTalent but without calling it directly
+							if (World.GetBlock(this.Position.XYZi()).GetType() == this.Species.BlockType) 
+								World.DeleteBlock(this.Position.XYZi());
+							this.stumpHealth = 0;
+							
+							// Give tree resources
+							var changes = InventoryChangeSet.New(player.User.Inventory, player.User);
+							var trunkResources = this.Species.TrunkResources;
+							if (trunkResources != null) 
+								trunkResources.ForEach(x => changes.AddItemsNonUnique(x.Key, x.Value.RandIntInc));
+							changes.TryApply();
+							
+							this.RPC("DestroyStump");
+							
+							// Plant spot is now available for new growth
+							EcoSim.PlantSim.UpRootPlant(this);
+							
+							// Notify the player
+							player.InfoBox(new LocString(typeof(Eco.Mods.TechTree.LoggingLoggersLuckTalent).GetLocDisplayName().ToString() + " activated!"));
+						}
+						else
+						{
+							// Normal stump damage process
+							this.stumpHealth = Mathf.Max(0, this.stumpHealth - amount);
+
+							if (this.stumpHealth <= 0)
+							{
+								if (World.GetBlock(this.Position.XYZi()).GetType() == this.Species.BlockType) World.DeleteBlock(this.Position.XYZi());
+								this.stumpHealth = 0;
+								//give tree resources
+								if (giveResource)
+								{
+									var changes = InventoryChangeSet.New(player.User.Inventory, player.User);
+									var trunkResources = this.Species.TrunkResources;
+									if (trunkResources != null) trunkResources.ForEach(x => changes.AddItemsNonUnique(x.Key, x.Value.RandIntInc));
+									else DebugUtils.Fail("Trunk resources missing for: " + this.Species.Name);
+									changes.TryApply();
+								}
+								this.RPC("DestroyStump");
+
+								// Let another plant grow here
+								EcoSim.PlantSim.UpRootPlant(this);
+							}
+						}
+
 						this.MarkDirty();
 						this.CheckDestroy();
-						return;
-					}
-					
-                    this.stumpHealth = Mathf.Max(0, this.stumpHealth - amount);
+					});
+				}
+			}
+			else this.TryDamageTrunk(pack, damager, amount, tool);
 
-                    if (this.stumpHealth <= 0)
-                    {
-                        if (World.GetBlock(this.Position.XYZi()).GetType() == this.Species.BlockType) World.DeleteBlock(this.Position.XYZi());
-                        this.stumpHealth = 0;
-                        //give tree resources
-                        if (player != null && giveResource)
-                        {
-                            var changes = InventoryChangeSet.New(player.User.Inventory, player.User);
-                            var trunkResources = this.Species.TrunkResources;
-                            if (trunkResources != null) trunkResources.ForEach(x => changes.AddItemsNonUnique(x.Key, x.Value.RandInt));
-                            else DebugUtils.Fail("Trunk resources missing for: " + this.Species.Name);
-                            changes.TryApply();
-                        }
-                        this.RPC("DestroyStump");
-
-                        // Let another plant grow here
-                        EcoSim.PlantSim.UpRootPlant(this);
-                    }
-
-                    this.MarkDirty();
-                    this.CheckDestroy();
-                });
-            }
-            else this.TryDamageTrunk(pack, damager, amount, tool);
-
-            return pack;
-        }
+			return pack;
+		}
 
         private GameActionPack TryDamageLeaf(GameActionPack pack, INetObject damager, float amount, int leafID, Item tool)
         {

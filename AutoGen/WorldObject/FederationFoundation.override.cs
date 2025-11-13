@@ -86,8 +86,7 @@ namespace Eco.Mods.TechTree
     [IconGroup("World Object Minimap")]
     [Ecopedia("Work Stations", "Government", createAsSubPage: true)]
     [Tag("Housing")]
-    [Weight(10000)] // Defines how heavy FederationFoundation is.
-    [Tag(nameof(SurfaceTags.CanBeOnRug))] 
+    [Weight(10000)] // Defines how heavy FederationFoundation is. 
         public partial class FederationFoundationItem : SettlementFoundationItem<FederationFoundationObject>, IPersistentData
     {
         protected override OccupancyContext GetOccupancyContext => new SideAttachedContext( 0  | DirectionAxisFlags.Backward , WorldObject.GetOccupancyInfo(this.WorldObjectType));

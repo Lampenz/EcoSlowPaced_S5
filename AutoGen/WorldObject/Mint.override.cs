@@ -82,7 +82,6 @@ namespace Eco.Mods.TechTree
     [IconGroup("World Object Minimap")]
     [Ecopedia("Work Stations", "Economic", createAsSubPage: true)]
     [Weight(5000)] // Defines how heavy Mint is.
-    [Tag(nameof(SurfaceTags.CanBeOnRug))] 
         public partial class MintItem : WorldObjectItem<MintObject>, IPersistentData
     {
         protected override OccupancyContext GetOccupancyContext => new SideAttachedContext( 0  | DirectionAxisFlags.Down , WorldObject.GetOccupancyInfo(this.WorldObjectType));

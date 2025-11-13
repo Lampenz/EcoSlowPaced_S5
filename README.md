@@ -25,6 +25,10 @@ Every research paper 	- For example Geology or dendrology can only be made when 
 
 Work parties - Admin only
 
+Skill profession related:
+- Moved tailoring to hunter profession group.
+  So this now consistest of: Hunting, Butchery, Tailoring.
+
 Added logging level 6 skill:
 - CleanUpCrew 			-> Chance of stump being removed when tree is felled.
 - Loggersluck 			-> Chance of tree being cut to pieces instantly during chopping.

@@ -33,7 +33,7 @@ namespace Eco.Mods.TechTree
     [LocDisplayName("Tailoring")]
     [LocDescription("Creating new clothes and setting trends. Levels up by crafting related recipes.")]
     [Ecopedia("Professions", "Tailor", createAsSubPage: true)]
-    [RequiresSkill(typeof(TailorSkill), 0), Tag("Tailor Specialty"), Tier(2)] // Changed this line to HuntingSkill 20250909 ~ Lampenz
+    [RequiresSkill(typeof(HunterSkill), 0), Tag("Tailor Specialty"), Tier(2)] // Changed this line to HunterSkill to move tailoring under hunter group.
     [Tag("Specialty")]
     [Tag("Teachable")]
     public partial class TailoringSkill : Skill

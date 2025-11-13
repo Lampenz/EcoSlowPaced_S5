@@ -54,11 +54,15 @@ Garden hedges 				-> Updated.
 StorageMore					-> Updated.
 Polychrome					-> Updated.
 Loggersluck					-> Updated.
+PriceCalculator				-> Updated.
+MightyMooseCore             -> Updated.
+NidToolbox					-> Updated (need to look at config files).
 No more books 				-> Used old, no new version available.
 TimedSkillsUnlocked			-> Used old, no new version available.
 Road_Extensions				-> Used old, no new version available.
 CivicsImport				-> Used old, no new version available.
 ERC-HEwnLog					-> Used old, no new version available.
-PriceCalculator				-> Used old, no new version available.
-WordEdit					-> Used old, no new version available.
-NidToolbox					-> Crashes on start, need to check with newer version.
+WordEdit					-> Deleted, need new version.
+
+TODO:
+In preseason, paint house, to see if it creates more housing value (according to eco settings it should..)

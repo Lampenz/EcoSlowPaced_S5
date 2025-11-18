@@ -69,12 +69,59 @@ namespace Eco.Mods.TechTree
         }
     }
 
+#region add hullplanks to lumber
+
+    // Add Hullplanks to lumber.
+    public partial class LumberRecipe : RecipeFamily
+    {
+        partial void ModsPreInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(WoodenHullPlanksItem), 1, true));
+        }
+    }
+
+    // Add hullplanks to lumber
+    public partial class SoftwoodLumberRecipe : Recipe
+    {
+        partial void ModsPostInitialize() // Use post initialise because this recipe doesnt have a preinit hook.
+        {
+            this.Ingredients.Add(new IngredientElement(typeof(WoodenHullPlanksItem), 1, true));
+        }
+    } 
+
+    // Add hullplanks to lumber
+    public partial class HardwoodLumberRecipe : Recipe
+    {
+        partial void ModsPostInitialize() // Use post initialise because this recipe doesnt have a preinit hook.
+        {
+            this.Ingredients.Add(new IngredientElement(typeof(WoodenHullPlanksItem), 1, true));
+        }
+    } 
+
+#endregion
+
     // Add basepaint to asphalt concrete.
     public partial class AsphaltConcreteRecipe : RecipeFamily
     {
         partial void ModsPreInitialize()
         {
             this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(BasePaintItem), 1, true));
+        }
+    }
+
+    public partial class ClayMoldRecipe : RecipeFamily
+    {
+        partial void ModsPreInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement("Fabric", 2, true));
+        }
+    }
+
+    public partial class WoodenMoldRecipe : RecipeFamily
+    {
+        partial void ModsPreInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement("Fabric", 2, true));
         }
     }
 }

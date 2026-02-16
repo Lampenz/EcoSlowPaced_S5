@@ -38,7 +38,7 @@ namespace Eco.Mods.TechTree
     [Tag("Oil")]
     [Ecopedia("Food", "Ingredients", createAsSubPage: true)]
     [LocDescription("A fish fat extracted by cooking fish for use in cooking.")] //The tooltip description for the food item.
-    public partial class PrimitiveFishOil : FoodItem
+    public partial class PrimitiveFishOilItem : FoodItem
     {
 
         /// <summary>The plural localization name for the food item.</summary>
@@ -84,7 +84,7 @@ namespace Eco.Mods.TechTree
                 // to create.
                 items: new List<CraftingElement>
                 {
-                    new CraftingElement<PrimitiveFishOil>(1)
+                    new CraftingElement<PrimitiveFishOilItem>(1)
                 });
             this.Recipes = new List<Recipe> { recipe };
             this.ExperienceOnCraft = 0.5f; // Defines how much experience is gained when crafted.

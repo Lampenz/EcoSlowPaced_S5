@@ -3,28 +3,89 @@ Slow paced server TPA code
 
 Season 5 changes
 
+# New items
+Item - Proffesion [Workbench] (Recipe)
+    -> used in
+
+SturdyWoodenPlanks (item)   - Made by Shipwright [SmallShipYard] (Hewn / Hullplanks)
+    -> Large Canoe / Egyption Canoe
+    -> Wooden Barge
+    -> Small wooden boat
+    -> WoodenTransportShip
+    -> MediumFishingTrawler
+    -> Small wooden Cart
+    -> Large wooden Cart
+    -> WoodShopCart
+    -> WoodenElevator
+    -> SteamTruck
+    -> SteamTractor
+    -> PoweredCart
+    -> HandPlow
+    -> Lumber
+
+WoodResin (Item)            - Made By Farmer [Arrastra] (Sprucelog or pinelog)
+    -> PrimitiveResin
+
+PrimitiveFishOil(Item)      - Made by Campfire Cook [Campfire] (RawFish)
+    -> Primitive Resin
+
+PrimitiveResin(Item)        - Made by Campfire Cook [Campfire] (WoodResin, Woodpulp, PrimitiveOil)
+    -> Sturdy wooden planks
+    -> Large Canoe / Egyption Canoe
+    -> Small wooden Cart
+    -> Large wooden Cart
+
+RoughFabricFilter (Item)    - Made by Farmer [Arrastra] (FabricTag)
+    -> Claymolds
+    -> Wetbricks? (not sure tho)
+
+BakingPaper (item)          - Made by PaperMiller [SmallPaperMachine] (CeluloseFibers) 
+    -> Baked meat,
+    -> baked roast,
+    -> baked muffin
+    -> baked ... etc
+
+
+FruitCocktail (consumable)  - Made by Gatherer [Arrastra] (Huckleberry, Papaya)
+    -> FruitInfusion
+
+FruitInfusion (consumable)  - Made by Campfire Cook [Campfire] (FruitCocktail)
+    -> Cooking proffesions salads.
+
+Coconut (consumable)        - Made by Gatherer [FiberScutchingTable] (PalmLog)
+    -> ShipWax
+
+ShipWax (item)              - Made by Shipwright[Arrastra] (Coconut)
+    -> Wooden Barge
+    -> WoodenTransportShip
+    -> Small wooden Boat
+    -> Large wooden Cart
+
+
+
+
+# New / Alternative recipes
+Adobe(tropical style)       - 3 Clay, 1 wood 							    -> Adobe.
+Adobe(Savanna style) 	    - 1 Dirt, 25 plantfibers			            -> Adobe.
+AsphaltFromStoneRoads       - 1 Cement, 1 Sand, 8 StoneRoad, 1 base paint	-> Asphalt.
+ClayRamp 				    - 6 Clay										-> DirtRamp.
+PalmOil					    - 8 palmseed									-> Oil.
+SmeltCopper/Copperbar	    - Removed Clay Mold refund.
+SmeltGold/Goldbar		    - Removed Clay Mold refund.
+SmeltIron/Ironbar		    - Removed Clay Mold refund.
+Every research paper 	    - For example Geology or dendrology can only be made when skill level is atleast 3 (only exception is mining at level 2).
+
 # Additions to existing recipes
 StorageSilo 			        - Added 6 hullplanks.
 Seedbarrel 				        - Added 2 hullplanks.
 Woodenwheel 			        - Added 1 hullplank.
-Lumber                    - Added 1 Hullplank.
+Lumber                          - Added 1 SturdyWoodenPlanl.
 AsphaltConcreet 		      - Added 1 basepaint.
 Woodenmolds               - Added 2 "fabric" tag.
 Claymolds                 - Added 2 "fabric" tag. 
 RefineHeartOfPalm		      - Added 2 palmseeds as output.
 All skillscrolls		      - Added related workbench. 
 All skillscrolls		      - Released all scrolls to be crafted by any proffesion.
-
-# New / Alternative recipes
-Adobe(tropical style)     - 3 Clay, 1 wood 							-> Adobe.
-Adobe(Savanna style) 	    - 1 Dirt, 25 plantfibers			-> Adobe.
-AsphaltFromStoneRoads     - 1 Cement, 1 Sand, 8 StoneRoad, 1 base paint	-> Asphalt.
-ClayRamp 				          - 6 Clay										  -> DirtRamp.
-PalmOil					          - 8 palmseed									-> Oil.
-SmeltCopper/Copperbar	    - Removed Clay Mold refund.
-SmeltGold/Goldbar		      - Removed Clay Mold refund.
-SmeltIron/Ironbar		      - Removed Clay Mold refund.
-Every research paper 	    - For example Geology or dendrology can only be made when skill level is atleast 3 (only exception is mining at level 2).
 
 Work parties - Admin only
 

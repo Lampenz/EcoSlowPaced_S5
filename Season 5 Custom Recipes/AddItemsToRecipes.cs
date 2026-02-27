@@ -47,7 +47,7 @@ namespace Eco.Mods.TechTree
     {
         partial void ModsPostInitialize()
         {
-            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(WoodenHullPlanksItem), 6, true));
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(WoodenHullPlanksItem), 8, true));
         }
     }
 
@@ -68,35 +68,6 @@ namespace Eco.Mods.TechTree
             this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(WoodenHullPlanksItem), 1, true));
         }
     }
-
-#region add hullplanks to lumber
-
-    // Add Hullplanks to lumber.
-    public partial class LumberRecipe : RecipeFamily
-    {
-        partial void ModsPreInitialize()
-        {
-            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(WoodenHullPlanksItem), 1, true));
-        }
-    }
-
-    // Add hullplanks to lumber
-    public partial class SoftwoodLumberRecipe : Recipe
-    {
-        partial void ModsPostInitialize() // Use post initialise because this recipe doesnt have a preinit hook.
-        {
-            this.Ingredients.Add(new IngredientElement(typeof(WoodenHullPlanksItem), 1, true));
-        }
-    } 
-
-    // Add hullplanks to lumber
-    public partial class HardwoodLumberRecipe : Recipe
-    {
-        partial void ModsPostInitialize() // Use post initialise because this recipe doesnt have a preinit hook.
-        {
-            this.Ingredients.Add(new IngredientElement(typeof(WoodenHullPlanksItem), 1, true));
-        }
-    } 
 
 #endregion
 

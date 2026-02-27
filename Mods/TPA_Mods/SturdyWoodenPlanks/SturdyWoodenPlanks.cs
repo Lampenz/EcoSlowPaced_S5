@@ -30,7 +30,7 @@ namespace Eco.Mods.TechTree
 
         
     /// <summary>
-    /// <para>Server side recipe definition for "SturdyWoodenPlanks".</para>
+    /// <para>Server side recipe definition for "SturdyWoodenPlank".</para>
     /// <para>More information about RecipeFamily objects can be found at https://docs.play.eco/api/server/eco.gameplay/Eco.Gameplay.Items.RecipeFamily.html</para>
     /// </summary>
     /// <remarks>

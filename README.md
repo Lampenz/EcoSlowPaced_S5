@@ -23,7 +23,7 @@ SturdyWoodenPlanks (item)   - Made by Shipwright [SmallShipYard] (Hewn / Hullpla
     -> HandPlow
     -> Lumber
 
-WoodResin (Item)            - Made By Farmer [Arrastra] (Sprucelog or pinelog)
+WoodResin (Item)            - Made By Farmer [FiberscutchingTable] (Sprucelog or pinelog)
     -> PrimitiveResin
 
 PrimitiveFishOil(Item)      - Made by Campfire Cook [Campfire] (RawFish)
@@ -40,11 +40,7 @@ RoughFabricFilter (Item)    - Made by Farmer [Arrastra] (FabricTag)
     -> Wetbricks? (not sure tho)
 
 BakingPaper (item)          - Made by PaperMiller [SmallPaperMachine] (CeluloseFibers) 
-    -> Baked meat,
-    -> baked roast,
-    -> baked muffin
-    -> baked ... etc
-
+    -> All baking recipes
 
 FruitCocktail (consumable)  - Made by Gatherer [Arrastra] (Huckleberry, Papaya)
     -> FruitInfusion
@@ -138,4 +134,4 @@ WordEdit					          -> Deleted, need new version.
 -> Metal hull sheets in barrels.
 -> See where we can add rope / fabrics. (cloth in asphalt as drainage?)
 -> Cloth in clay molds (as a dust catcher?).  [v]
--> 
+-> Look into the milk item? -> seems to be hidden

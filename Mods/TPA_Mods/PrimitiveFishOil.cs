@@ -33,7 +33,7 @@ namespace Eco.Mods.TechTree
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Primitive Fish Oil")] // Defines the localized name of the item.
     [Weight(100)] // Defines how heavy the Oil is.
-    [Fuel(4000)][Tag("Fuel")] // Marks the Oil as fuel item.
+    [Fuel(2000)][Tag("Fuel")] // Marks the Oil as fuel item.
     [Ecopedia("Food", "Ingredients", createAsSubPage: true)]
     [LocDescription("A fish fat extracted by cooking fish for use in cooking.")] //The tooltip description for the food item.
     public partial class PrimitiveFishOilItem : FoodItem

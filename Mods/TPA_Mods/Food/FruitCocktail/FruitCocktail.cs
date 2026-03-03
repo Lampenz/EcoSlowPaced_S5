@@ -20,7 +20,7 @@ namespace Eco.Mods.TechTree
 
     /// <summary>
     /// <para>
-    /// Server side food item definition for the "FernCampfireSalad" item. 
+    /// Server side food item definition for the "FruitCocktail" item. 
     /// This object inherits the FoodItem base class to allow for consumption mechanics.
     /// </para>
     /// <para>More information about FoodItem objects can be found at https://docs.play.eco/api/server/eco.gameplay/Eco.Gameplay.Items.FoodItem.html</para>
@@ -31,15 +31,21 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Fruit Cocktail")] // Defines the localized name of the item.
-    [Weight(100)] // Defines how heavy the FernCampfireSalad is.
-    [Ecopedia("Food", "Fruit Cocktail", createAsSubPage: true)]
+    [Weight(100)] // Defines how heavy the FruitCocktail is.
+    [Ecopedia("Food", "Campfire", createAsSubPage: true)]
     [LocDescription("A myriad of fruits that make a healthy and juicy blend.")] //The tooltip description for the food item.
     public partial class FruitCocktailItem : FoodItem
     {
+        // Prevent this item from being put on a table.
+        // public override Task<bool> CanPlaceObject(Player player, Vector3 pos, Quaternion rotation) => Task.FromResult(false);
+        public override bool CanBeHeld                  => false;
 
+        /// <summary>The plural localization name for the food item.</summary>
+        public override LocString DisplayNamePlural     => Localizer.DoStr("Fruit Cocktail");
 
         /// <summary>The amount of calories awarded for eating the food item.</summary>
         public override float Calories                  => 600;
+
         /// <summary>The nutritional value of the food item.</summary>
         public override Nutrients Nutrition             => new Nutrients() { Carbs = 0, Fat = 1, Protein = 1, Vitamins = 15};
 
@@ -49,7 +55,7 @@ namespace Eco.Mods.TechTree
 
 
     /// <summary>
-    /// <para>Server side recipe definition for "FernCampfireSalad".</para>
+    /// <para>Server side recipe definition for "FruitCocktail".</para>
     /// <para>More information about RecipeFamily objects can be found at https://docs.play.eco/api/server/eco.gameplay/Eco.Gameplay.Items.RecipeFamily.html</para>
     /// </summary>
     /// <remarks>
@@ -94,7 +100,7 @@ namespace Eco.Mods.TechTree
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Fern Campfire Salad"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("Fern Campfire Salad"), recipeType: typeof(FruitCocktailRecipe));
+            this.Initialize(displayText: Localizer.DoStr("Fruit cocktail"), recipeType: typeof(FruitCocktailRecipe));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.

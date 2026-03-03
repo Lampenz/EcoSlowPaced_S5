@@ -48,7 +48,7 @@ namespace Eco.Mods.TechTree
     {
         partial void ModsPostInitialize()
         {
-            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(SturdyWoodenPlankItem), 5, true));
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(RoughFabricFilterItem), 5, true));
         }
     }
 }

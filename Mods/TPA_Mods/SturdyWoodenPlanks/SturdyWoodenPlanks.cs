@@ -52,7 +52,7 @@ namespace Eco.Mods.TechTree
                 // type of the item, the amount of the item, the skill required, and the talent used.
                 ingredients: new List<IngredientElement>
                 {
-                    new IngredientElement("HewnLog", 4, typeof(ShipwrightSkill), typeof(ShipwrightLavishResourcesTalent)), //noloc
+                    new IngredientElement("HewnLog", 2, typeof(ShipwrightSkill), typeof(ShipwrightLavishResourcesTalent)), //noloc
                     new IngredientElement(typeof(PrimitiveResinItem), 1, typeof(ShipwrightSkill), typeof(ShipwrightLavishResourcesTalent)), //noloc
                 },
 
@@ -61,7 +61,7 @@ namespace Eco.Mods.TechTree
                 // to create.
                 items: new List<CraftingElement>
                 {
-                    new CraftingElement<SturdyWoodenPlankItem>()
+                    new CraftingElement<SturdyWoodenPlankItem>(2)
                 });
             this.Recipes = new List<Recipe> { recipe };
             this.ExperienceOnCraft = 0.5f; // Defines how much experience is gained when crafted.

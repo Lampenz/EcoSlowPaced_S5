@@ -54,7 +54,7 @@ namespace Eco.Mods.TechTree
                 ingredients: new List<IngredientElement>
                 {
                     new IngredientElement(typeof(WoodPulpItem), 10, typeof(FarmingSkill), typeof(ButcheryLavishResourcesTalent)),
-                    new IngredientElement(typeof(SpruceLogItem), 3, typeof(FarmingSkill), typeof(ButcheryLavishResourcesTalent)),
+                    new IngredientElement(typeof(SpruceLogItem), 1, typeof(FarmingSkill), typeof(ButcheryLavishResourcesTalent)),
                 },
 
                 // Define our recipe output items.
@@ -62,7 +62,7 @@ namespace Eco.Mods.TechTree
                 // to create.
                 items: new List<CraftingElement>
                 {
-                    new CraftingElement<WoodResinItem>(), // Byproducts should not be affected by Lavish Workspace talent
+                    new CraftingElement<WoodResinItem>(5), // Byproducts should not be affected by Lavish Workspace talent
                 });
             this.Recipes = new List<Recipe> { recipe };
             this.ExperienceOnCraft = 1; // Defines how much experience is gained when crafted.
@@ -104,7 +104,7 @@ namespace Eco.Mods.TechTree
                 ingredients: new List<IngredientElement>
                 {
                     new IngredientElement(typeof(WoodPulpItem), 10, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
-                    new IngredientElement(typeof(FirLogItem), 3, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
+                    new IngredientElement(typeof(FirLogItem), 1, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
                 },
 
                 // Define our recipe output items.
@@ -112,11 +112,11 @@ namespace Eco.Mods.TechTree
                 // to create.
                 items: new List<CraftingElement>
                 {
-                    new CraftingElement<WoodResinItem>(), // Byproducts should not be affected by Lavish Workspace talent
+                    new CraftingElement<WoodResinItem>(5), // Byproducts should not be affected by Lavish Workspace talent
                 });
            
             this.ModsPostInitialize();
-            CraftingComponent.AddTagProduct(typeof(FarmersTableObject), typeof(WoodResinRecipe) ,this);
+            CraftingComponent.AddTagProduct(typeof(FiberScutchingStationObject), typeof(WoodResinRecipe) ,this);
         }
 
         /// <summary>Hook for mods to customize RecipeFamily after initialization, but before registration. You can change skill requirements here.</summary>
@@ -135,7 +135,7 @@ namespace Eco.Mods.TechTree
     [LocDisplayName("Wood Resin")] // Defines the localized name of the item.
     [Weight(500)] // Defines how heavy Lubricant is.
     [Ecopedia("Items", "Products", createAsSubPage: true)]
-    [LocDescription("A sticky residue made from the finest cold forrest logs.")] //The tooltip description for the item.
+    [LocDescription("A sticky residue extracted from the finest cold forrest logs.")] //The tooltip description for the item.
     public partial class WoodResinItem : PartItem    {
         public override IDynamicValue SkilledRepairCost     => skilledRepairCost;
         private static IDynamicValue skilledRepairCost      = new ConstantValue(1);

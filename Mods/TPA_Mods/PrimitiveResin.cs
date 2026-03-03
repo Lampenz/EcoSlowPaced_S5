@@ -73,8 +73,8 @@ namespace Eco.Mods.TechTree
                 // type of the item, the amount of the item, the skill required, and the talent used.
                 ingredients: new List<IngredientElement>
                 {
-                    new IngredientElement(typeof(WoodResinItem), 2, typeof(CampfireCookingSkill), typeof(CampfireCookingLavishResourcesTalent)),
-                    new IngredientElement(typeof(PrimitiveFishOilItem), 2, typeof(CampfireCookingSkill), typeof(CampfireCookingLavishResourcesTalent)),
+                    new IngredientElement(typeof(WoodResinItem), 1, typeof(CampfireCookingSkill), typeof(CampfireCookingLavishResourcesTalent)),
+                    new IngredientElement(typeof(PrimitiveFishOilItem), 1, typeof(CampfireCookingSkill), typeof(CampfireCookingLavishResourcesTalent)),
                 },
 
                 // Define our recipe output items.
@@ -82,7 +82,7 @@ namespace Eco.Mods.TechTree
                 // to create.
                 items: new List<CraftingElement>
                 {
-                    new CraftingElement<PrimitiveResinItem>(), // Byproducts should not be affected by Lavish Workspace talent
+                    new CraftingElement<PrimitiveResinItem>(2), // Byproducts should not be affected by Lavish Workspace talent
                 });
             this.Recipes = new List<Recipe> { recipe };
             this.ExperienceOnCraft = 1; // Defines how much experience is gained when crafted.

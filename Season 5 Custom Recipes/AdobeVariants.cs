@@ -74,7 +74,7 @@ namespace Eco.Mods.TechTree
         partial void ModsPostInitialize();
     }
 	
-	 public partial class AdobeSavannaRecipe : RecipeFamily
+    public partial class AdobeSavannaRecipe : RecipeFamily
     {
         public AdobeSavannaRecipe()
         {

@@ -55,7 +55,7 @@ namespace Eco.Mods.TechTree
                 {
                     new IngredientElement(typeof(CementItem), 1, typeof(BasicEngineeringSkill), typeof(BasicEngineeringLavishResourcesTalent)),
                     new IngredientElement(typeof(SandItem), 1, typeof(BasicEngineeringSkill), typeof(BasicEngineeringLavishResourcesTalent)),
-                    new IngredientElement(typeof(StoneRoadItem), 8, typeof(BasicEngineeringSkill), typeof(BasicEngineeringLavishResourcesTalent)), 
+                    new IngredientElement(typeof(StoneRoadItem), 10, typeof(BasicEngineeringSkill), typeof(BasicEngineeringLavishResourcesTalent)), 
                     new IngredientElement(typeof(BasePaintItem), 1, true),//noloc
                 },
 

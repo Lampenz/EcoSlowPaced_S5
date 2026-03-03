@@ -41,7 +41,8 @@ namespace Eco.Mods.TechTree
     using Eco.Core.Utils;
 	using Eco.Gameplay.Components.Storage;
     using Eco.Gameplay.Items.Recipes;
-    
+   
+    #region Hullplanks 
     // Add hullplanks to storage silo recipe.
     public partial class StorageSiloRecipe : RecipeFamily
     {
@@ -68,8 +69,7 @@ namespace Eco.Mods.TechTree
             this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(WoodenHullPlanksItem), 1, true));
         }
     }
-
-#endregion
+    #endregion
 
     // Add basepaint to asphalt concrete.
     public partial class AsphaltConcreteRecipe : RecipeFamily
@@ -77,22 +77,6 @@ namespace Eco.Mods.TechTree
         partial void ModsPreInitialize()
         {
             this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(BasePaintItem), 1, true));
-        }
-    }
-
-    public partial class ClayMoldRecipe : RecipeFamily
-    {
-        partial void ModsPreInitialize()
-        {
-            this.Recipes[0].Ingredients.Add(new IngredientElement("Fabric", 2, true));
-        }
-    }
-
-    public partial class WoodenMoldRecipe : RecipeFamily
-    {
-        partial void ModsPreInitialize()
-        {
-            this.Recipes[0].Ingredients.Add(new IngredientElement("Fabric", 2, true));
         }
     }
 }

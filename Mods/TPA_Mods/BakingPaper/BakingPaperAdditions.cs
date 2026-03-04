@@ -151,47 +151,6 @@ namespace Eco.Mods.TechTree
         }
     }
 
-    // Maybe also add cupecakeshape paper?
-    // Add BakingPaper to FruitMuffin
-    public partial class FruitMuffinRecipe : RecipeFamily
-    {
-        partial void ModsPostInitialize()
-        {
-            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(BakingPaperItem), 1, true));
-        }
-    }
-
-    // Maybe also add tartshaped paper?
-    // Add BakingPaper to FruitTart
-    public partial class FruitTartRecipe : RecipeFamily
-    {
-        partial void ModsPostInitialize()
-        {
-            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(BakingPaperItem), 1, true));
-        }
-    }
-
-    // add tartshaped paper?
-    // Add BakingPaper to HuckleberryPie
-    public partial class HuckleberryPieRecipe : RecipeFamily
-    {
-        partial void ModsPostInitialize()
-        {
-            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(BakingPaperItem), 1, true));
-        }
-    }
-
-    // add tartshaped paper?
-    // Add BakingPaper to Meatpie
-    public partial class MeatPieRecipe : RecipeFamily
-    {
-        partial void ModsPostInitialize()
-        {
-            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(BakingPaperItem), 1, true));
-        }
-    }
-
-
     // Add BakingPaper to Huckleberry Fritter
     public partial class HuckleberryFritterRecipe : RecipeFamily
     {

@@ -30,7 +30,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [RequiresSkill(typeof(MillingSkill), 1)]
     [Ecopedia("Food", "Ingredients", subPageName: "CoconutMilk Item")]
-    public partial class CoconutMilk : RecipeFamily
+    public partial class CoconutMilkRecipe : RecipeFamily
     {
         public CoconutMilkRecipe()
         {
@@ -43,7 +43,7 @@ namespace Eco.Mods.TechTree
                 // type of the item, the amount of the item, the skill required, and the talent used.
                 ingredients: new List<IngredientElement>
                 {
-                    new IngredientElement(typeof(CoconutMilkItem), 1, typeof(MillingSkill), typeof(MillingLavishResourcesTalent)),
+                    new IngredientElement(typeof(CoconutItem), 1, typeof(GatheringSkill)),
                 },
 
                 // Define our recipe output items.
@@ -51,24 +51,24 @@ namespace Eco.Mods.TechTree
                 // to create.
                 items: new List<CraftingElement>
                 {
-                    new CraftingElement<CoconutMilkItem>(2)
+                    new CraftingElement<MilkItem>(2)
                 });
             this.Recipes = new List<Recipe> { recipe };
             this.ExperienceOnCraft = 0.5f; // Defines how much experience is gained when crafted.
             
             // Defines the amount of labor required and the required skill to add labor
-            this.LaborInCalories = CreateLaborInCaloriesValue(15, typeof(MillingSkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(30, typeof(GatheringSkill));
 
             // Defines our crafting time for the recipe
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(CoconutMilkRecipe), start: 1, skillType: typeof(MillingSkill), typeof(MillingFocusedSpeedTalent), typeof(MillingParallelSpeedTalent));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(CoconutMilkRecipe), start: 0.5f, skillType: typeof(GatheringSkill));
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Oil"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("Coconut milk"), recipeType: typeof(OilRecipe));
+            this.Initialize(displayText: Localizer.DoStr("Coconut milk"), recipeType: typeof(CoconutMilkRecipe));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.
-            CraftingComponent.AddRecipe(tableType: typeof(MillObject), recipeFamily: this);
+            CraftingComponent.AddRecipe(tableType: typeof(ArrastraObject), recipeFamily: this);
         }
 
         /// <summary>Hook for mods to customize RecipeFamily before initialization. You can change recipes, xp, labor, time here.</summary>

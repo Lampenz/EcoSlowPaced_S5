@@ -39,9 +39,9 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [RequiresSkill(typeof(PaperMillingSkill), 3)]
     [Ecopedia("Items", "Products", subPageName: "TartBakingMoldItem")]
-    public partial class BakingPaperRecipe : RecipeFamily
+    public partial class TartBakingMoldRecipe : RecipeFamily
     {
-        public BakingPaperRecipe()
+        public TartBakingMoldRecipe()
         {
             var recipe = new Recipe();
             recipe.Init(
@@ -74,7 +74,7 @@ namespace Eco.Mods.TechTree
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Paper"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("BakingPaper"), recipeType: typeof(PaperRecipe));
+            this.Initialize(displayText: Localizer.DoStr("TartBakingMold"), recipeType: typeof(PaperRecipe));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.

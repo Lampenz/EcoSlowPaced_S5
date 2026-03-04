@@ -44,11 +44,11 @@ namespace Eco.Mods.TechTree
     
 
     // Add BakingPaper to bakedAgave
-    public partial class BakedAgaveRecipe : RecipeFamily
-    {
-        partial void ModsPostInitialize()
-        {
-            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(BakingPaperItem), 1, true));
-        }
-    }
+//    public partial class BakedAgaveRecipe : RecipeFamily
+//    {
+//        partial void ModsPostInitialize()
+//        {
+//            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(BakingPaperItem), 1, true));
+//        }
+//    }
 }

@@ -57,6 +57,10 @@ FruitInfusion (consumable)  - Made by Campfire Cook [Campfire] (FruitCocktail).
 
 Coconut (consumable)        - Made by Gatherer [FiberScutchingTable] (PalmLog).
     -> ShipWax
+    -> Coconut Milk
+
+Coconut Milk (consumable)   - Made by Gatherer [Arrastra] (Coconut).
+    
 
 ShipWax (item)              - Made by Shipwright[Arrastra] (Coconut).
     -> Wooden Barge

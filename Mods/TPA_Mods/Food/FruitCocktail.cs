@@ -44,7 +44,7 @@ namespace Eco.Mods.TechTree
         public override LocString DisplayNamePlural     => Localizer.DoStr("Fruit Cocktail");
 
         /// <summary>The amount of calories awarded for eating the food item.</summary>
-        public override float Calories                  => 600;
+        public override float Calories                  => 500;
 
         /// <summary>The nutritional value of the food item.</summary>
         public override Nutrients Nutrition             => new Nutrients() { Carbs = 0, Fat = 1, Protein = 1, Vitamins = 15};
@@ -62,7 +62,7 @@ namespace Eco.Mods.TechTree
     /// This is an auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization. 
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
-    [RequiresSkill(typeof(GatheringSkill), 1)]
+    [RequiresSkill(typeof(GatheringSkill), 5)]
     [Ecopedia("Food", "Campfire", subPageName: "Fruit Cocktail Item")]
     public partial class FruitCocktailRecipe : RecipeFamily
     {
@@ -104,7 +104,7 @@ namespace Eco.Mods.TechTree
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.
-            CraftingComponent.AddRecipe(tableType: typeof(CampfireObject), recipeFamily: this);
+            CraftingComponent.AddRecipe(tableType: typeof(ArrastraObject), recipeFamily: this);
         }
 
         /// <summary>Hook for mods to customize RecipeFamily before initialization. You can change recipes, xp, labor, time here.</summary>

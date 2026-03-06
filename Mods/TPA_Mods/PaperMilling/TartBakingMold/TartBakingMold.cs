@@ -101,12 +101,6 @@ namespace Eco.Mods.TechTree
     [Weight(25)] // Defines how heavy Paper is.
     [Ecopedia("Items", "Products", createAsSubPage: true)]
     [LocDescription("A paper mold used for baking the finest and tastiest tarts")] //The tooltip description for the item.
-    public partial class TartBakingMoldItem : PartItem    {
-        public override IDynamicValue SkilledRepairCost     => skilledRepairCost;
-        private static IDynamicValue skilledRepairCost      = new ConstantValue(1);
-
-        public float ReduceMaxDurabilityByPercent       => 0.05f;
-        
-
+    public partial class TartBakingMoldItem : Item    {
     }
 }

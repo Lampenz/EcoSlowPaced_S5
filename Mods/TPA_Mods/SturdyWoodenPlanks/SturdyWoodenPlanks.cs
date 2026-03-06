@@ -88,33 +88,12 @@ namespace Eco.Mods.TechTree
         partial void ModsPostInitialize();
     }
     
-    /// <summary>
-    /// <para>Server side item definition for the "WoodenHullPlanks" item.</para>
-    /// <para>More information about PartItem objects can be found at https://docs.play.eco/api/server/eco.gameplay/Eco.Gameplay.Items.PartItem.html</para>
-    /// </summary>
-    /// <remarks>
-    /// This is an auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization. 
-    /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
-    /// </remarks>
+
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Sturdy Wooden Planks")] // Defines the localized name of the item.
-    [Weight(750)] // Defines how heavy WoodenHullPlanks is.
-    [RepairRequiresSkill(typeof(ShipwrightSkill), 0)]
+    [Weight(750)] // Defines how heavy Sturdy wooden planks is.
     [Ecopedia("Items", "Products", createAsSubPage: true)]
     [LocDescription("Sturdy wooden planks, crafted from reinforced wood.")] //The tooltip description for the item.
-    public partial class SturdyWoodenPlankItem : PartItem    {
-        private static SkillModifiedValue skilledRepairCost = new SkillModifiedValue(2, ShipwrightSkill.MultiplicativeStrategy, typeof(ShipwrightSkill), typeof(SturdyWoodenPlankItem), Localizer.DoStr("repair cost"), DynamicValueType.Efficiency);
-
-        public override IDynamicValue SkilledRepairCost => skilledRepairCost;
-        public override int FullRepairAmount            => 2;
-        public float ReduceMaxDurabilityByPercent       => 0.05f;
-        
-
-        // This handles multiple repair elements and how much reduction in cost of the material type
-        // meaning 1 = full cost and .1 = 10% of the total cost for 100% repair.
-        public override IEnumerable<RepairingItem> RepairItems {get
-        {
-                    yield return new() { Item = Item.Get("HewnLogItem"), MaterialMult = 2 };
-        } }
+    public partial class SturdyWoodenPlankItem : Item    {
     }
 }

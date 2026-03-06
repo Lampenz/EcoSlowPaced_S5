@@ -136,12 +136,6 @@ namespace Eco.Mods.TechTree
     [Weight(500)] // Defines how heavy Lubricant is.
     [Ecopedia("Items", "Products", createAsSubPage: true)]
     [LocDescription("A sticky residue extracted from the finest cold forrest logs.")] //The tooltip description for the item.
-    public partial class WoodResinItem : PartItem    {
-        public override IDynamicValue SkilledRepairCost     => skilledRepairCost;
-        private static IDynamicValue skilledRepairCost      = new ConstantValue(1);
-
-        /// <summary>The plural localization name for the item.</summary>
-        public override LocString DisplayNamePlural { get { return Localizer.DoStr("WoodResin"); } }
-        public float ReduceMaxDurabilityByPercent       => 0.05f;
+    public partial class WoodResinItem : Item    {
     }
 }

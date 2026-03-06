@@ -100,12 +100,6 @@ namespace Eco.Mods.TechTree
     [Weight(25)] // Defines how heavy Paper is.
     [Ecopedia("Items", "Products", createAsSubPage: true)]
     [LocDescription("Thin slice of greasy paper used for baking")] //The tooltip description for the item.
-    public partial class BakingPaperItem : PartItem    {
-        public override IDynamicValue SkilledRepairCost     => skilledRepairCost;
-        private static IDynamicValue skilledRepairCost      = new ConstantValue(1);
-
-        public float ReduceMaxDurabilityByPercent       => 0.05f;
-        
-
+    public partial class BakingPaperItem : Item    {
     }
 }

@@ -100,14 +100,6 @@ namespace Eco.Mods.TechTree
     [Weight(75)] // Defines how heavy RoughFilterFabric is.
     [Ecopedia("Items", "Products", createAsSubPage: true)]
     [LocDescription("A rough filter made by crushing other fabrics")] //The tooltip description for the item.
-    public partial class RoughFabricFilterItem : PartItem    {
-        public override IDynamicValue SkilledRepairCost     => skilledRepairCost;
-        private static IDynamicValue skilledRepairCost      = new ConstantValue(1);
-
-        /// <summary>The plural localization name for the item.</summary>
-        public override LocString DisplayNamePlural { get { return Localizer.DoStr("Rough Filter Fabric"); } }
-        public float ReduceMaxDurabilityByPercent       => 0.05f;
-        
-
+    public partial class RoughFabricFilterItem : Item    {
     }
 }

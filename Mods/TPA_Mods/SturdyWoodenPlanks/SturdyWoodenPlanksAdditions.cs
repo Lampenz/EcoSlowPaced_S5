@@ -68,6 +68,7 @@ namespace Eco.Mods.TechTree
         partial void ModsPostInitialize()
         {
             this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(SturdyWoodenPlankItem), 8, true));
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(ShipWaxItem), 5, true));
         }
     }
 
@@ -77,6 +78,7 @@ namespace Eco.Mods.TechTree
         partial void ModsPostInitialize()
         {
             this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(SturdyWoodenPlankItem), 20, true));
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(ShipWaxItem), 10, true));
         }
     }
 
@@ -86,6 +88,7 @@ namespace Eco.Mods.TechTree
         partial void ModsPostInitialize()
         {
             this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(SturdyWoodenPlankItem), 10, true));
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(ShipWaxItem), 14, true));
         }
     }
 
@@ -95,6 +98,7 @@ namespace Eco.Mods.TechTree
         partial void ModsPostInitialize()
         {
             this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(SturdyWoodenPlankItem), 10, true));
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(ShipWaxItem), 10, true));
         }
     }
 

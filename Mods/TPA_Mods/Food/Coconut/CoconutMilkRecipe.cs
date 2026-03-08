@@ -28,7 +28,7 @@ namespace Eco.Mods.TechTree
     /// This is an auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization. 
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
-    [RequiresSkill(typeof(MillingSkill), 1)]
+    [RequiresSkill(typeof(GatheringSkill), 5)]
     [Ecopedia("Food", "Ingredients", subPageName: "CoconutMilk Item")]
     public partial class CoconutMilkRecipe : RecipeFamily
     {

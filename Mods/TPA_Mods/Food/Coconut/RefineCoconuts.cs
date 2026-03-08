@@ -51,8 +51,9 @@ namespace Eco.Mods.TechTree
                 // to create.
                 items: new List<CraftingElement>
                 {
-                    new CraftingElement<CoconutItem>(2),  // Byproducts should not be affected by Lavish Workspace talent
-                    new CraftingElement<WoodPulpItem>(4), // Byproducts should not be affected by Lavish Workspace talent
+                    new CraftingElement<CoconutItem>(2),  
+                    new CraftingElement<PalmSeedItem>(2),  
+                    new CraftingElement<WoodPulpItem>(4), 
                 });
             this.Recipes = new List<Recipe> { recipe };
             this.ExperienceOnCraft = 0.5f; // Defines how much experience is gained when crafted.

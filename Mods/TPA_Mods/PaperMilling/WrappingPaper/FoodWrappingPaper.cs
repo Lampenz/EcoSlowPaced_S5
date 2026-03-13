@@ -73,7 +73,7 @@ namespace Eco.Mods.TechTree
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Paper"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("FoodWrappingPaper"), recipeType: typeof(PaperRecipe));
+            this.Initialize(displayText: Localizer.DoStr("Food Wrapping Paper"), recipeType: typeof(PaperRecipe));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.

@@ -41,14 +41,33 @@ namespace Eco.Mods.TechTree
     using Eco.Core.Utils;
 	using Eco.Gameplay.Components.Storage;
     using Eco.Gameplay.Items.Recipes;
-    
-
-    // Add rough filter fabric to clay molds.
-    public partial class ClayMoldRecipe : RecipeFamily
+   
+    #region Hullplanks 
+    // Add hullplanks to storage silo recipe.
+    public partial class StorageSiloRecipe : RecipeFamily
     {
         partial void ModsPostInitialize()
         {
-            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(RoughFabricFilterItem), 2, true));
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(WoodenHullPlanksItem), 8, true));
         }
     }
+
+    // Add hullplanks to seedbarrel recipe.
+    public partial class SeedbarrelRecipe : RecipeFamily
+    {
+        partial void ModsPreInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(WoodenHullPlanksItem), 2, true));
+        }
+    }
+
+    // Add hullplanks to wooden wheels.
+    public partial class WoodenWheelRecipe : RecipeFamily
+    {
+        partial void ModsPreInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(WoodenHullPlanksItem), 1, true));
+        }
+    }
+    #endregion
 }

@@ -1,0 +1,45 @@
+<ecopedia icon="RusticLawnmowerItem">
+  <section type="banner" image="BasicLaborEcopedia" />
+  <summary>Hand-pushed vehicle tools for early-game farming, harvesting, mowing, and road building.</summary>
+
+  <section type="header">BasicLabor Mod</section>
+  <section>
+    The <b>BasicLabor Mod</b> adds four hand-pushed vehicle tools to Eco, designed for players who need to work the land before mechanized equipment becomes available. Each tool is human-powered and crafted at the [WainwrightTableItem] using [BasicEngineeringSkill].
+  </section>
+
+  <section type="header">Vehicle Tools</section>
+  <section>
+    <b>Four hand-pushed vehicles:</b>
+
+    • [RoadCompactorItem] - Compacts dirt into roads as you push it along. Crafted with 1 [HandleBarItem], 1 [CompactorRollerItem], and 2 [WoodenGearItem]. Requires [BasicEngineeringSkill] 2. Calorie cost reduced by [BasicEngineeringSkill] level.
+
+    • [RusticLawnmowerItem] - Cuts grass and collects plant fibers in a built-in grass catcher (3 slots). Crafted with 1 [HandleBarItem], 1 [ReelBladeAssemblyItem], and 2 [WoodenGearItem]. Requires [BasicEngineeringSkill] 3. Calorie cost reduced by [GatheringSkill] level.
+
+    • [WheeledSeedDrillItem] - Plants seeds from its hopper (3 slots) into tilled soil as you push it through fields. Crafted with 1 [HandleBarItem], 1 [SeedTrayItem], and 2 [WoodenGearItem]. Requires [BasicEngineeringSkill] 2. Calorie cost reduced by [FarmingSkill] level.
+
+    • [WheeledReaperItem] - Harvests crops and stores them in a basket (4 slots). Crafted with 1 [HandleBarItem] and 1 [CultivatorHarrowItem]. Requires [BasicEngineeringSkill] 2. Calorie cost reduced by [GatheringSkill] level.
+
+    All vehicles are crafted at the [WainwrightTableItem]. Each part is repaired by the same skill used to craft it.
+  </section>
+
+  <section type="header">Replaceable Parts</section>
+  <section>
+    Each vehicle uses specialized parts that wear down with use and must be periodically replaced:
+
+    • [CompactorRollerItem] - Heavy iron roller for the Road Compactor. Crafted at [MasonryTableItem] with [MasonrySkill] 1.
+    • [ReelBladeAssemblyItem] - Spinning blades for the Rustic Lawnmower. Crafted at [AnvilItem] with [BlacksmithSkill] 1.
+    • [SeedTrayItem] - Seed tube tray for the Wheeled Seed Drill. Crafted at [CarpentryTableItem] with [CarpentrySkill] 1.
+    • [CultivatorHarrowItem] - Cultivator discs for the Wheeled Reaper. Crafted at [AnvilItem] with [BlacksmithSkill] 1.
+
+    The [HandleBarItem] is a shared component used by all four vehicles. Crafted at the [BloomeryItem] with [SmeltingSkill] 1.
+  </section>
+
+  <section type="header">How It Works</section>
+  <section>
+    All BasicLabor vehicles are human-powered: simply push them across the terrain to perform their action. Each block you cross triggers the tool's effect and consumes calories scaled by your skill level.
+
+    Vehicles with storage (Lawnmower, Seed Drill, Reaper) visually show their contents filling up as items are added to their slots. When full, you must empty the storage before the tool can continue collecting.
+
+    Parts degrade with use and can be repaired or replaced through the vehicle's parts panel.
+  </section>
+</ecopedia>

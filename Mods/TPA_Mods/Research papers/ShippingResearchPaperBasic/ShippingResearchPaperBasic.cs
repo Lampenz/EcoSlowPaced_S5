@@ -39,7 +39,6 @@ namespace Eco.Mods.TechTree
                 ingredients: new List<IngredientElement>
                 {
                     new IngredientElement(typeof(PrimitiveResinItem), 5, typeof(ShipwrightSkill)), //noloc
-                    new IngredientElement(typeof(ShipWaxItem), 5, typeof(ShipwrightSkill)), //noloc
                     new IngredientElement(typeof(SturdyWoodenPlankItem), 5, typeof(ShipwrightSkill)), //noloc      
                     new IngredientElement(typeof(WoodenHullPlanksItem), 5, typeof(ShipwrightSkill)), //noloc                  
                 },

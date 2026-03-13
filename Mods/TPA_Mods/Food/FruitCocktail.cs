@@ -86,7 +86,4 @@ namespace Eco.Mods.TechTree
         /// <summary>Defines the default time it takes for this item to spoil. This value can be modified by the inventory this item currently resides in.</summary>
         public override float BaseShelfLife            => (float)TimeUtil.HoursToSeconds(72);
     }
-
-
-
 }

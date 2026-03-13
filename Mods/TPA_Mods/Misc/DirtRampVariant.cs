@@ -120,7 +120,7 @@ namespace Eco.Mods.TechTree
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Dirt Ramp"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("Ramp back to dirt"), recipeType: typeof(RampToDirt));
+            this.Initialize(displayText: Localizer.DoStr("Recycle ramps back to dirt"), recipeType: typeof(RampToDirt));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.

@@ -20,15 +20,6 @@ namespace Eco.Mods.TechTree
     using Eco.Gameplay.Settlements.ClaimStakes;
     using Eco.Gameplay.Items.Recipes;
 
-
-    /// <summary>
-    /// <para>Server side recipe definition for "RefineHeartOfPalm".</para>
-    /// <para>More information about RecipeFamily objects can be found at https://docs.play.eco/api/server/eco.gameplay/Eco.Gameplay.Items.RecipeFamily.html</para>
-    /// </summary>
-    /// <remarks>
-    /// This is an auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization. 
-    /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
-    /// </remarks>
     [RequiresSkill(typeof(GatheringSkill), 1)]
     public partial class RefineCoconutsRecipe : RecipeFamily
     {
@@ -47,13 +38,11 @@ namespace Eco.Mods.TechTree
                 },
 
                 // Define our recipe output items.
-                // For every output item there needs to be one CraftingElement entry with the type of the final item and the amount
-                // to create.
                 items: new List<CraftingElement>
                 {
                     new CraftingElement<CoconutItem>(2),  
-                    new CraftingElement<PalmSeedItem>(2),  
                     new CraftingElement<WoodPulpItem>(4), 
+                    new CraftingElement<PalmSeedItem>(2),  
                 });
             this.Recipes = new List<Recipe> { recipe };
             this.ExperienceOnCraft = 0.5f; // Defines how much experience is gained when crafted.

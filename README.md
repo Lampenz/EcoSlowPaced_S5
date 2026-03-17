@@ -72,19 +72,17 @@ ShippingResearchPaperBasic  - Made by shipwright on the ResearchTable.
     -> SturdyWoodenPlanks
     -> Hullplanks
 
-
-
-
 # New / Alternative recipes
-Adobe(tropical style)       - 3 Clay, 1 wood 							    -> Adobe.
-Adobe(Savanna style) 	    - 1 Dirt, 25 plantfibers			            -> Adobe.
-AsphaltFromStoneRoads       - 1 Cement, 1 Sand, 10 StoneRoad, 1 base paint	-> Asphalt.
-ClayRamp 				    - 6 Clay										-> DirtRamp.
-PalmOil					    - 8 palmseed									-> Oil.
-SmeltCopper/Copperbar	    - Removed Clay Mold refund.
-SmeltGold/Goldbar		    - Removed Clay Mold refund.
-SmeltIron/Ironbar		    - Removed Clay Mold refund.
-Every research paper 	    - For example Geology or dendrology can only be made when skill level is atleast 3 (only exception is mining at level 2).
+Lumber                          - changed ammount of boards / added sturdy wooden planks to recipe
+Adobe(tropical style)           - 3 Clay, 1 wood 							    -> Adobe.
+Adobe(Savanna style) 	        - 1 Dirt, 25 plantfibers			            -> Adobe.
+AsphaltFromStoneRoads           - 1 Cement, 1 Sand, 10 StoneRoad, 1 base paint	-> Asphalt.
+ClayRamp 				        - 6 Clay										-> DirtRamp.
+PalmOil					        - 8 palmseed									-> Oil.
+SmeltCopper/Copperbar	        - Removed Clay Mold refund.
+SmeltGold/Goldbar		        - Removed Clay Mold refund.
+SmeltIron/Ironbar		        - Removed Clay Mold refund.
+Every research paper 	        - For example Geology or dendrology can only be made when skill level is atleast 3 (only exception is mining at level 2).
 
 # Additions to existing recipes
 StorageSilo 			        - Added 6 hullplanks.
@@ -127,26 +125,24 @@ Mint
 
 
 # OWN registration:
-Interior plant collection 	-> NEW.
-StatueMod 					        -> NEW.
+StatueMod 					        -> NEW (removed bear statue).
 DecoTreeMod 				        -> Updated.
-Garden hedges 			        -> Updated.
+Garden hedges 			            -> Updated.
 StorageMore					        -> Updated.
 Polychrome					        -> Updated.
 Loggersluck					        -> Updated.
-PriceCalculator			        -> Updated.
-MightyMooseCore             -> Updated.
+PriceCalculator			            -> Updated.
+MightyMooseCore                     -> Updated.
 NidToolbox					        -> Updated (need to look at config files).
-No more books 				      -> Used old, no new version available.
-TimedSkillsUnlocked			    -> Used old, no new version available.
-Road_Extensions				      -> Used old, no new version available.
+No more books 				        -> Used old, no new version available.
+TimedSkillsUnlocked			        -> Used old, no new version available.
+Road_Extensions				        -> Used old, no new version available.
 CivicsImport				        -> Used old, no new version available.
 ERC-HEwnLog					        -> Used old, no new version available.
-WordEdit					          -> Deleted, need new version.
+WordEdit					        -> New version (by tramponia)
+PlacebleStoneMod                    -> Updated.
+BasicLaborMod                       -> Updated.
 
 
--> Add Hullplanks in lumber. [v]
+
 -> Metal hull sheets in barrels.
--> See where we can add rope / fabrics. (cloth in asphalt as drainage?)
--> Cloth in clay molds (as a dust catcher?).  [v]
--> Look into the milk item? -> seems to be hidden

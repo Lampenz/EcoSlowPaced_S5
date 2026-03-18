@@ -52,7 +52,7 @@ namespace Eco.Mods.TechTree
                 // type of the item, the amount of the item, the skill required, and the talent used.
                 ingredients: new List<IngredientElement>
                 {
-                    new IngredientElement("Fabric", 2, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
+                    new IngredientElement("Fabric", 1, typeof(FarmingSkill), typeof(FarmingLavishResourcesTalent)),
                 },
 
                 // Define our recipe output items.
@@ -60,7 +60,7 @@ namespace Eco.Mods.TechTree
                 // to create.
                 items: new List<CraftingElement>
                 {
-                    new CraftingElement<RoughFabricFilterItem>()
+                    new CraftingElement<RoughFabricFilterItem>(4)
                 });
             this.Recipes = new List<Recipe> { recipe };
             this.ExperienceOnCraft = 0.5f; // Defines how much experience is gained when crafted.

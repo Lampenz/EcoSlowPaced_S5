@@ -29,7 +29,7 @@ namespace Eco.Mods.TechTree
                 ingredients: new List<IngredientElement>
                 {
                     new IngredientElement(typeof(PapayaItem), 3, typeof(GatheringSkill)),
-                    new IngredientElement(typeof(HuckleberriesItem), 6, typeof(GatheringSkill)),
+                    new IngredientElement(typeof(HuckleberriesItem), 5, typeof(GatheringSkill)),
                     new IngredientElement(typeof(CoconutItem), 1, typeof(GatheringSkill)),
                 },
 

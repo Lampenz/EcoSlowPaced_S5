@@ -1,3 +1,10 @@
+// Fish stock add PrimitiveFishOil?
+// Paper plate
+// -> Loaded taro fries
+// -> Fish 'n Chips
+// -> Boiled Rice
+// -> Simmered meat?
+
 namespace Eco.Mods.TechTree
 {
     using System;
@@ -42,28 +49,46 @@ namespace Eco.Mods.TechTree
 	using Eco.Gameplay.Components.Storage;
     using Eco.Gameplay.Items.Recipes;
 
-    public partial class MixedSaladRecipe : RecipeFamily
+    public partial class ExoticFruitSaladRecipe : RecipeFamily
     {
         partial void ModsPostInitialize()
         {
-           this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(FoodWrappingPaperItem), 1, true));
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(FruitInfusionItem), 1, true));
         }
     }
 
-    public partial class GrasslandSaladRecipe : RecipeFamily
+    public partial class MixedFruitSaladRecipe : RecipeFamily
     {
         partial void ModsPostInitialize()
         {
-           this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(FoodWrappingPaperItem), 1, true));
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(FruitInfusionItem), 1, true));
         }
     }
 
-    public partial class ForestSaladRecipe : RecipeFamily
+    public partial class RainforestFruitSaladRecipe : RecipeFamily
     {
         partial void ModsPostInitialize()
         {
-           this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(FoodWrappingPaperItem), 1, true));
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(FruitInfusionItem), 1, true));
+        }
+    }
+
+    public partial class MochiRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(FruitInfusionItem), 1, true));
+        }
+    }
+
+    public partial class PokeBowlRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(FruitInfusionItem), 1, true));
         }
     }
 
 }
+
+

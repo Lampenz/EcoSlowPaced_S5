@@ -42,33 +42,76 @@ namespace Eco.Mods.TechTree
 	using Eco.Gameplay.Components.Storage;
     using Eco.Gameplay.Items.Recipes;
  
-    public partial class WindmillRecipe : RecipeFamily
-    {
-        partial void ModsPostInitialize()
-        {
-            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(ShipWaxItem), 2, true));
-        }
-    }
-
-    public partial class WaterwheelRecipe : RecipeFamily
-    {
-        partial void ModsPostInitialize()
-        {
-            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(ShipWaxItem), 2, true));
-        }
-    }
-
     //SmallWoodenBoatRecipe -> Found in SturdyWoodenPlanksAdditions.cs
     //WoodenBargeRecipe -> Found in SturdyWoodenPlanksAdditions.cs
     //WoodenTransportShipRecipe -> Found in SturdyWoodenPlanksAdditions.cs
     //MediumFishingTrawlerRecipe -> Found in SturdyWoodenPlanksAdditions.cs
 
+    public partial class LumberBenchRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(ShipWaxItem), 2, true));
+        }
+    }
+
+    public partial class LumberChairRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(ShipWaxItem), 2, true));
+        }
+    }
+
+    public partial class LumberDoorRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(ShipWaxItem), 2, true));
+        }
+    }
+
+    public partial class LumberDresserRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(ShipWaxItem), 2, true));
+        }
+    }
+
+    public partial class LumberHallwayTableRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(ShipWaxItem), 1, true));
+        }
+    }
+
+    public partial class LumberTableRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(ShipWaxItem), 2, true));
+        }
+    }
+
     public partial class DecorativeShipWheelRecipe : RecipeFamily
     {        
         partial void ModsPostInitialize()
         {
-            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(ShipWaxItem), 10, true));
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(ShipWaxItem), 3, true));
         }
     }
+
+    // Rockerbox shipwax additions is added in rough fabric filter 
+    // public partial class RockerBoxRecipe : RecipeFamily
+    //{
+    //    partial void ModsPostInitialize()
+    //    {
+    //        this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(ShipWaxItem), 2, true));
+    //    }
+    //}
+
+
 
 }

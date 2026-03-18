@@ -48,7 +48,40 @@ namespace Eco.Mods.TechTree
     {
         partial void ModsPostInitialize()
         {
-            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(RoughFabricFilterItem), 2, true));
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(RoughFabricFilterItem), 1, true));
+        }
+    }
+
+    public partial class WoodenMoldRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(RoughFabricFilterItem), 1, true));
+        }
+    }
+
+    public partial class RockerBoxRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(RoughFabricFilterItem), 5, true));
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(ShipWaxItem), 2, true));
+        }
+    }
+
+    public partial class MechanicalWaterPumpRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(RoughFabricFilterItem), 16, true));
+        }
+    }
+
+    public partial class WasteFilterRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(RoughFabricFilterItem), 40, true));
         }
     }
 }

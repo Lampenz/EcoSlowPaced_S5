@@ -40,7 +40,7 @@ namespace Eco.Mods.TechTree
                 // Define our recipe output items.
                 items: new List<CraftingElement>
                 {
-                    new CraftingElement<CoconutItem>(2),  
+                    new CraftingElement<CoconutItem>(3),  
                     new CraftingElement<WoodPulpItem>(4), 
                     new CraftingElement<PalmSeedItem>(2),  
                 });

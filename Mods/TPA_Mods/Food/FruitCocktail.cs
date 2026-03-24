@@ -28,15 +28,15 @@ namespace Eco.Mods.TechTree
                 //Input + talents
                 ingredients: new List<IngredientElement>
                 {
-                    new IngredientElement(typeof(PapayaItem), 3, typeof(GatheringSkill)),
-                    new IngredientElement(typeof(HuckleberriesItem), 5, typeof(GatheringSkill)),
+                    new IngredientElement(typeof(PapayaItem), 1, typeof(GatheringSkill)),
+                    new IngredientElement(typeof(HuckleberriesItem), 3, typeof(GatheringSkill)),
                     new IngredientElement(typeof(CoconutItem), 1, typeof(GatheringSkill)),
                 },
 
                 //Output
                 items: new List<CraftingElement>
                 {
-                    new CraftingElement<FruitCocktailItem>(1)
+                    new CraftingElement<FruitCocktailItem>(1.1f)
                 });
             this.Recipes = new List<Recipe> { recipe };
             this.ExperienceOnCraft = 1; // Defines how much experience is gained when crafted.

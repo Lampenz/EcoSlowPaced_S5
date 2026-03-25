@@ -66,4 +66,85 @@ namespace Eco.Mods.TechTree
         }
     }
 
+    public partial class ExoticSaladRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+           this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(FoodWrappingPaperItem), 1, true));
+        }
+    }
+
+    public partial class LoadedTaroFriesRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+           this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(FoodWrappingPaperItem), 1, true));
+        }
+    }
+ 
+    public partial class CrimsonSaladRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+           this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(FoodWrappingPaperItem), 1, true));
+        }
+    }
+
+    public partial class PineappleFriendRiceRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+           this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(FoodWrappingPaperItem), 1, true));
+        }
+    }
+
+    public partial class MillionairesSaladRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+           this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(FoodWrappingPaperItem), 1, true));
+        }
+    }
+
+    public partial class MixedVegetableMedleyRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+           this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(FoodWrappingPaperItem), 1, true));
+        }
+    }
+
+    public partial class MushroomMedleyRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+           this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(FoodWrappingPaperItem), 1, true));
+        }
+    }
+
+    public partial class ExoticVegetableMedleyRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+           this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(FoodWrappingPaperItem), 1, true));
+        }
+    }
+
+    public partial class SweetSaladRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+           this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(FoodWrappingPaperItem), 1, true));
+        }
+    }
+
+    public partial class WildMixRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+           this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(FoodWrappingPaperItem), 1, true));
+        }
+    }
+
+
 }

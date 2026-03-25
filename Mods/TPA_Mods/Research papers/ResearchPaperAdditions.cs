@@ -59,4 +59,20 @@ namespace Eco.Mods.TechTree
             this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(TailoringResearchPaperBasicItem), 1, true));
         }
     }
+
+//    public partial class GlassworkingSkillBookRecipe : RecipeFamily  
+//    {
+//        partial void ModsPostInitialize()
+//        {
+//            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(ShippingResearchPaperBasicItem), 5, true));
+//        }
+//    }
+//
+//    public partial class PotterySkillBookRecipe : RecipeFamily   
+//    {
+//        partial void ModsPostInitialize()
+//        {
+//            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(TailoringResearchPaperBasicItem), 5, true));
+//        }
+//    }
 }

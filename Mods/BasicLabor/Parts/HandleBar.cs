@@ -16,7 +16,7 @@ namespace Eco.Mods.TechTree
     [LocDescription("A sturdy iron bar fitted with a wooden grip. A common component used to steer and push various hand-powered tools.")]
     public partial class HandleBarItem : Item { }
 
-    [RequiresSkill(typeof(SmeltingSkill), 1)]
+    [RequiresSkill(typeof(ShipwrightSkill), 1)]
     [Ecopedia("Items", "Products", subPageName: "Handle Bar Item")]
     public partial class HandleBarRecipe : RecipeFamily
     {
@@ -29,7 +29,7 @@ namespace Eco.Mods.TechTree
 
                 ingredients: new List<IngredientElement>
                 {
-                    new IngredientElement(typeof(IronBarItem), 4, typeof(SmeltingSkill), typeof(SmeltingLavishResourcesTalent)),
+                    new IngredientElement(typeof(IronBarItem), 4, typeof(ShipwrightSkill), typeof(ShipwrightLavishResourcesTalent)),
                 },
 
                 items: new List<CraftingElement>
@@ -40,14 +40,14 @@ namespace Eco.Mods.TechTree
             this.Recipes = new List<Recipe> { recipe };
             this.ExperienceOnCraft = 2;
 
-            this.LaborInCalories = CreateLaborInCaloriesValue(150, typeof(SmeltingSkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(150, typeof(ShipwrightSkill));
 
             this.CraftMinutes = CreateCraftTimeValue(
                 beneficiary: typeof(HandleBarRecipe),
                 start: 5,
-                skillType: typeof(SmeltingSkill),
-                typeof(SmeltingFocusedSpeedTalent),
-                typeof(SmeltingParallelSpeedTalent));
+                skillType: typeof(ShipwrightSkill),
+                typeof(ShipwrightFocusedSpeedTalent),
+                typeof(ShipwrightParallelSpeedTalent));
 
             this.ModsPreInitialize();
             this.Initialize(
@@ -55,7 +55,7 @@ namespace Eco.Mods.TechTree
                 recipeType: typeof(HandleBarRecipe));
             this.ModsPostInitialize();
 
-            CraftingComponent.AddRecipe(tableType: typeof(BloomeryObject), recipeFamily: this);
+            CraftingComponent.AddRecipe(tableType: typeof(SmallShipyardObject), recipeFamily: this);
         }
 
         partial void ModsPreInitialize();

@@ -424,7 +424,8 @@ namespace Eco.Mods.TechTree
                     ? new IngredientElement(ingredient.ItemRepresentation, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
-            
+
+            recipe.Ingredients.Add(new IngredientElement(typeof(ShippingResearchPaperBasicItem), 5, true));            
             recipe.Ingredients.Add(new IngredientElement(typeof(GlassworksItem), 1, true));
         }
 
@@ -596,7 +597,9 @@ namespace Eco.Mods.TechTree
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
             
+            recipe.Ingredients.Add(new IngredientElement(typeof(TailoringResearchPaperBasicItem), 5, true));
             recipe.Ingredients.Add(new IngredientElement(typeof(KilnItem), 1, true));
+
         }
 
         partial void ModsPostInitialize()

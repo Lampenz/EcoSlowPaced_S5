@@ -267,4 +267,29 @@ namespace Eco.Mods.TechTree
             this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(BakingPaperItem), 1, true));
         }
     }  
+
+    public partial class TortillaRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(BakingPaperItem), 1, true));
+        }
+    }  
+
+    public partial class FishNChipsRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(BakingPaperItem), 1, true));
+        }
+    }  
+
+    public partial class TaroFriesRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(BakingPaperItem), 1, true));
+        }
+    }  
+
 }

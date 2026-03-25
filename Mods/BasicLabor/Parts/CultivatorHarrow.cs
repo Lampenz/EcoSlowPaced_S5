@@ -13,12 +13,12 @@ namespace Eco.Mods.TechTree
     [Serialized]
     [LocDisplayName("Cultivator Harrow")]
     [Weight(3000)]
-    [RepairRequiresSkill(typeof(BlacksmithSkill), 1)]
+    [RepairRequiresSkill(typeof(CarpentrySkill), 1)]
     [Ecopedia("Items", "Products", createAsSubPage: true)]
     [LocDescription("A set of iron cultivator discs used in the Wheeled Reaper to harvest crops from fields. Wears down with use.")]
     public partial class CultivatorHarrowItem : PartItem
     {
-        private static SkillModifiedValue skilledRepairCost = new SkillModifiedValue(5, BlacksmithSkill.MultiplicativeStrategy, typeof(BlacksmithSkill), typeof(CultivatorHarrowItem), Localizer.DoStr("repair cost"), DynamicValueType.Efficiency);
+        private static SkillModifiedValue skilledRepairCost = new SkillModifiedValue(5, BlacksmithSkill.MultiplicativeStrategy, typeof(CarpentrySkill), typeof(CultivatorHarrowItem), Localizer.DoStr("repair cost"), DynamicValueType.Efficiency);
 
         public override IDynamicValue SkilledRepairCost => skilledRepairCost;
         public override int FullRepairAmount            => 4;
@@ -30,7 +30,7 @@ namespace Eco.Mods.TechTree
         } }
     }
 
-    [RequiresSkill(typeof(BlacksmithSkill), 1)]
+    [RequiresSkill(typeof(CarpentrySkill), 3)]
     [Ecopedia("Items", "Products", subPageName: "Cultivator Harrow Item")]
     public partial class CultivatorHarrowRecipe : RecipeFamily
     {
@@ -43,9 +43,9 @@ namespace Eco.Mods.TechTree
 
                 ingredients: new List<IngredientElement>
                 {
-                    new IngredientElement(typeof(IronWheelItem), 4, true),
+                    new IngredientElement(typeof(IronWheelItem), 2, true),
                     new IngredientElement(typeof(WoodenWheelItem), 2, true),
-                    new IngredientElement("WoodBoard", 6, typeof(BlacksmithSkill), typeof(BlacksmithLavishResourcesTalent)), //noloc
+                    new IngredientElement("WoodBoard", 4, typeof(CarpentrySkill), typeof(CarpentryLavishResourcesTalent)), //noloc
                 },
 
                 items: new List<CraftingElement>
@@ -56,14 +56,14 @@ namespace Eco.Mods.TechTree
             this.Recipes = new List<Recipe> { recipe };
             this.ExperienceOnCraft = 4;
 
-            this.LaborInCalories = CreateLaborInCaloriesValue(200, typeof(BlacksmithSkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(200, typeof(CarpentrySkill));
 
             this.CraftMinutes = CreateCraftTimeValue(
                 beneficiary: typeof(CultivatorHarrowRecipe),
                 start: 8,
-                skillType: typeof(BlacksmithSkill),
-                typeof(BlacksmithFocusedSpeedTalent),
-                typeof(BlacksmithParallelSpeedTalent));
+                skillType: typeof(CarpentrySkill),
+                typeof(CarpentryFocusedSpeedTalent),
+                typeof(CarpentryParallelSpeedTalent));
 
             this.ModsPreInitialize();
             this.Initialize(
@@ -71,7 +71,7 @@ namespace Eco.Mods.TechTree
                 recipeType: typeof(CultivatorHarrowRecipe));
             this.ModsPostInitialize();
 
-            CraftingComponent.AddRecipe(tableType: typeof(AnvilObject), recipeFamily: this);
+            CraftingComponent.AddRecipe(tableType: typeof(CarpentryTableObject), recipeFamily: this);
         }
 
         partial void ModsPreInitialize();

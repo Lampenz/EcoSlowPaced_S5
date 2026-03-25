@@ -2322,6 +2322,7 @@ namespace Eco.Mods.TechTree
                     new IngredientElement("Lumber", 60, typeof(CarpentrySkill), typeof(CarpentryLavishResourcesTalent)),    // Recette personnalisable : "50" Lumber.
                     new IngredientElement("WoodBoard", 40, typeof(CarpentrySkill), typeof(CarpentryLavishResourcesTalent)), // Recette personnalisable : "20" WoodBoard.
                     new IngredientElement("Wood", 40, typeof(CarpentrySkill), typeof(CarpentryLavishResourcesTalent)),      // Recette personnalisable : "20" Wood.
+                    new IngredientElement(typeof(SturdyWoodenPlankItem), 10, typeof(CarpentrySkill), typeof(CarpentryLavishResourcesTalent)),      // Recette personnalisable : "20" Wood.
                     new IngredientElement(typeof(NailItem), 50, typeof(BlacksmithSkill)),                                   // Added nails (20250729-Lampenz)
                 },
 

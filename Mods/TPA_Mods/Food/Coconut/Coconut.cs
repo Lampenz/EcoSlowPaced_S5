@@ -40,7 +40,7 @@ namespace Eco.Mods.TechTree
     {
 
         /// <summary>The plural localization name for the food item.</summary>
-        public override LocString DisplayNamePlural     => Localizer.DoStr("Juicy coconut of the palm tree");
+        public override LocString DisplayNamePlural     => Localizer.DoStr("Coconut");
 
         /// <summary>The amount of calories awarded for eating the food item.</summary>
         public override float Calories                  => 125;

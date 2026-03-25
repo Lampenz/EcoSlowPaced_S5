@@ -32,7 +32,7 @@ namespace Eco.Mods.TechTree
             { typeof(ButcherySkillScroll),              0 },
             { typeof(TailoringSkillScroll),             4 },
             { typeof(BasicEngineeringSkillScroll),      7 },
-            { typeof(PaperMillingSkillScroll),          21 },
+            { typeof(PaperMillingSkillScroll),          14 },
             { typeof(ShipwrightSkillScroll),            4 },
             { typeof(SmeltingSkillScroll),              11 },
             { typeof(MillingSkillScroll),               7 },

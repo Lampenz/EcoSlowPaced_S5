@@ -84,4 +84,69 @@ namespace Eco.Mods.TechTree
             this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(RoughFabricFilterItem), 40, true));
         }
     }
+
+    public partial class YellowPowderRecipe : RecipeFamily    
+    {
+        partial void ModsPostInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(RoughFabricFilterItem), 2, true));
+        }
+    }
+
+    public partial class WhitePowderRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(RoughFabricFilterItem), 2, true));
+        }
+    }
+
+    public partial class MagentaPowderRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(RoughFabricFilterItem), 2, true));
+        }
+    }
+
+    public partial class CyanPowderRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(RoughFabricFilterItem), 2, true));
+        }
+    }
+
+    public partial class ColoredPowderRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(RoughFabricFilterItem), 2, true));
+        }
+    }
+
+    public partial class CharcoalPowderRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(RoughFabricFilterItem), 2, true));
+        }
+    }
+
+    public partial class BluePowderRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(RoughFabricFilterItem), 2, true));
+        }
+    }
+
+    public partial class BlackPowderRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(RoughFabricFilterItem), 2, true));
+        }
+    }
+
 }

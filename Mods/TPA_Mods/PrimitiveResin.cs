@@ -42,13 +42,7 @@ namespace Eco.Mods.TechTree
     [Weight(500)] // Defines how heavy Lubricant is.
     [Ecopedia("Items", "Products", createAsSubPage: true)]
     [LocDescription("The most simplest form of resin available")] //The tooltip description for the item.
-    public partial class PrimitiveResinItem : PartItem    {
-        public override IDynamicValue SkilledRepairCost     => skilledRepairCost;
-        private static IDynamicValue skilledRepairCost      = new ConstantValue(1);
-
-        /// <summary>The plural localization name for the item.</summary>
-        public override LocString DisplayNamePlural { get { return Localizer.DoStr("PrimitiveResin"); } }
-        public float ReduceMaxDurabilityByPercent       => 0.05f;
+    public partial class PrimitiveResinItem : Item    {
     }
 
     /// <summary>

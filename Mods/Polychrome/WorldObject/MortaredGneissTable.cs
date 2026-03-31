@@ -98,47 +98,4 @@ namespace Eco.Mods.TechTree
         };
 
     }
-
-    /// <summary>
-    /// <para>Server side recipe definition for "MortaredGneissTable".</para>
-    /// <para>More information about RecipeFamily objects can be found at https://docs.play.eco/api/server/eco.gameplay/Eco.Gameplay.Items.RecipeFamily.html</para>
-    /// </summary>
-    /// <remarks>
-    /// This is an auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization. 
-    /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
-    /// </remarks>
-    [RequiresSkill(typeof(MasonrySkill), 2)]
-    [ForceCreateView]
-    [Ecopedia("Housing Objects", "Seating", subPageName: "Mortared Gneiss Table Item")]
-    public partial class MortaredGneissTableRecipe : Recipe
-    {
-        public MortaredGneissTableRecipe()
-        {
-            this.Init(
-                name: "MortaredGneissTable",  //noloc
-                displayName: Localizer.DoStr("Mortared Gneiss Table"),
-
-                // Defines the ingredients needed to craft this recipe. An ingredient items takes the following inputs
-                // type of the item, the amount of the item, the skill required, and the talent used.
-                ingredients: new List<IngredientElement>
-                {
-                    new IngredientElement(typeof(MortaredGneissItem), 22, typeof(MasonrySkill), typeof(MasonryLavishResourcesTalent)),
-                },
-
-                // Define our recipe output items.
-                // For every output item there needs to be one CraftingElement entry with the type of the final item and the amount
-                // to create.
-                items: new List<CraftingElement>
-                {
-                    new CraftingElement<MortaredGneissTableItem>()
-                });
-            // Perform post initialization steps for user mods and initialize our recipe instance as a tag product with the crafting system
-            this.ModsPostInitialize();
-            CraftingComponent.AddTagProduct(typeof(MasonryTableObject), typeof(MortaredStoneTableRecipe), this);
-        }
-
-
-        /// <summary>Hook for mods to customize RecipeFamily after initialization, but before registration. You can change skill requirements here.</summary>
-        partial void ModsPostInitialize();
-    }
 }

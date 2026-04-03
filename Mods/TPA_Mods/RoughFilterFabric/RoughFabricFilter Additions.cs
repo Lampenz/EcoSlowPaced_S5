@@ -149,4 +149,28 @@ namespace Eco.Mods.TechTree
         }
     }
 
+    public partial class CopperHydroxideRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(RoughFabricFilterItem), 2, true));
+        }
+    }
+
+    public partial class IronOxideRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(RoughFabricFilterItem), 2, true));
+        }
+    }
+
+   public partial class PowderedCreosoteRecipe : RecipeFamily
+    {
+        partial void ModsPostInitialize()
+        {
+            this.Recipes[0].Ingredients.Add(new IngredientElement(typeof(RoughFabricFilterItem), 2, true));
+        }
+    }
+
 }
